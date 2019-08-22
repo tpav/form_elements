@@ -140,7 +140,7 @@
 <!-- CSS UNique to elements -->
 <!--###############################################################-->
 <style>
-// php sets SVG check icon color
+/* only way to set SVG background color */
 <?php $checked_color = 'rgba(8,79,140,1)';?>
 :root {
     --checked_color:8,79,140;
@@ -160,6 +160,7 @@ legend {
     margin: 0;
     padding: 0 0 15px 0;
     width: 100%;
+    
 }
 fieldset {
   border: 0;
@@ -171,6 +172,7 @@ fieldset {
 body:not(:-moz-handler-blocked) fieldset {
   display: table-cell;
 }
+
 /* Edge and IE will use system styles */
 @supports(-webkit-appearance: none) {
  	.checkradio {
@@ -179,7 +181,7 @@ body:not(:-moz-handler-blocked) fieldset {
 		height: var(--checkradio_size);
 		border: 2px solid var(--fields_border_color);
 		position: relative;
-		background: none;
+		background: #fff;
 		outline:none;
 		vertical-align:middle;
 	}
