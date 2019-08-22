@@ -98,30 +98,36 @@
 <body>
 
 
+<h3>Button element (Preferred)</h3>
+    <div style="text-align:center; display:inline-block; min-width:300px;">
+        <button class="button ripple pulse disabled">Button 
+            <span class="button_icon" aria-hidden="true">
+                <img src="https://www.envoyhub.com/images/downward_dollar_icon_rev.svg" style="width:auto; height:17px; vertical-align:middle;" />
+            </span>
+            <div class="loader" role="alert"></div>
+        </button>
+    </div>
+    <p>Pros: Accepts click, space or enter/return and tab events, Will submit form if in form element, Allows nested elements<br />Cons: No native event outside forms<br />Remove disabled class with js if you want to keep disabled state until user initiates interaction or after client side validation.<br />Optional classes "ripple", "pulse" and "disabled. Optional icon.</p>
+ <h3>Anchor tag</h3>
+    <a class="button ripple" href="#0" tabindex="0" role="button">Anchor <span class="button_icon" aria-hidden="true"><img src="https://www.envoyhub.com/images/downward_dollar_icon_rev.svg" style="width:auto; height:17px; vertical-align:middle;" /></span><div class="loader" role="alert"></div></a>
+    <p>Pros: Accepts click, enter/return, Allows nested elements<br />Cons: accessibility issues, Tab event requires tabindex="0", Have to prevent default event</p>
+    
+<h3>Input type submit</h3>
+    <input class="pulse" type="submit" name="tsubmit" id="submit-save_button" value="Submit input &rarr;">
+    <p>Pros: Accepts click, space, enter/return and tab events, Will submit form if in form element<br />Cons: difficult to combine with icons, Can't use CSS :after</p>
 
-
-
-
-
-
-
-
-
+<h3>div element</h3>
+    <div class="button ripple" tabindex="0" role="button">Div<div class="loader" role="alert"></div></div>
+    <p>Pros: Allows nested elements<br />Cons: accessibility issues, No enter/return, tab event requires tabindex="0", Accepts click only</p>
+<pre><code class="language-markup"><script type="prism-html-markup"><div class="button ripple" tabindex="0" role="button">Div 
+    <div class="loader" role="alert"></div>
+</div>
 
 
 <!--###############################################################-->
 <!-- CSS UNique to elements -->
 <!--###############################################################-->
 <style>
-    :root {
-    /* define color agnostic of rgb or rgba so they work with either*/
-    /* bright orange */ --button-color-base: 255,165,0;
-    /* WCAG AA compliant orange --button-color-base: 211,127,0; */
-    /* WCAG AA compliant blue --button-color-base: 34,93,156; */
-    /* WCAG AA compliant green --button-color-base: 35,164,57; */
-    /* WCAG AA compliant red --button-color-base: 240,0,0; */
-    }
-
     input[type=submit], .button {
       -webkit-appearance: none;
       appearance: none;
@@ -249,27 +255,36 @@
        background-color: rgb(211,127,0);
   }
 }
-
-
-/**************************
-Text inputs and textarea - basic outline
-**************************/
-.inline_fields_group {display:flex; align-items:flex-end; justify-content:space-between;}
-.inline_fields_group .question_wrap  {flex:0 1 auto; padding-right:1vh!important;}
-.inline_fields_group .question_wrap:last-of-type {padding-right:0!important;}
-.question_wrap {margin-bottom:1.4vh; width:100%;}
-.text_field_label { margin:8px 0 2px 0; font-size:15px;}
-input[type=text],input[type=email],input[type=tel],textarea {-webkit-appearance: none; padding:1.1vh; width:100%; margin:4px 0; font-size:16px; border:var(--fields_border); background-color:#fff; background-image:none; border-radius:var(--fields_border_radius);}
-#zip {max-width:150px;}
-.question_wrap.text_input label,.question_wrap.select_input label {display:block; margin-top:0; padding-top:0; padding-left:3px; line-height:1.1;}
-textarea {font-size:16px;}
 </style>
 
 <!--###############################################################-->
 <!-- jQuery -->
 <!--###############################################################-->
-
-
+<script>
+// buttons, anchors, and divs click event. Edit for production to trigger submit event... 
+     $('.button').on('click', function(){
+        var button = $(this);
+        setTimeout(function(){
+            button.prop('disabled',true).addClass('button_active_fancy');
+        }, 500);
+        // for demo only
+        setTimeout(function(){
+            button.prop('disabled',false).removeClass('button_active_fancy');
+        }, 5000);
+    })
+    // input can't have :after or nested elements so handle differently
+    $('input[type=submit]').on('click', function(){
+        var button = $(this);
+        var button_label = $(this).val();
+        button.prop('disabled',true).addClass('button_darken');
+        button.val('Saving...');
+        // for demo only
+        setTimeout(function(){
+            button.prop('disabled',false).removeClass('button_darken');
+            button.val(button_label);
+        }, 5000);
+    })
+   </script>
 </body>
 </html>
 
