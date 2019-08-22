@@ -22,9 +22,6 @@
         h1 {border-top:2px solid gray; padding-top:25px; margin-top:25px; line-height:1.1;}
         h3 {margin-bottom:0; padding-bottom:10px; line-height:1.1;}
         .user-is-tabbing .show-on-tab {display:block!important;}
-        .sample {padding:25px 0;}
-        .swatch {height:20px; width:245px; border-radius:6px; font-size:12px; text-align:center; cursor:pointer; margin:10px 0; color:#fff;}
-        code[class*=language-], pre[class*=language-] {font-size:13px; line-height:1.2;}
 
         /* desktop */
         @media screen and (min-width: 800px) {
@@ -42,8 +39,15 @@
 
         }
     </style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script type="text/javascript" src="https://www.envoyhub.com/js/hammer.min.js"></script>
+	<script type="text/javascript" src="https://www.envoyhub.com/js/jquery.hammer.js"></script>
+	<script type="text/javascript" src="https://www.envoyhub.com/js/form_helpers.js"></script>
 </head>
 <body>
+
+
+
 <!--###############################################################-->
 <!-- HTML -->
 <!--###############################################################-->
@@ -57,7 +61,7 @@
         <input type="text" id="##tag##_2" name="##tag##" value="" autocomplete="additional-name" />
     </div>
     <div id="step-##data:step_id##_##tag##" class="question_wrap text_input">
-        <label id="label_for_##tag##_3" for="##tag##_3" class="text_field_label">Last name: <span class="required">(required)</span> <ul class="form_error" id="first_name-error"><li class="form_error" id="first_name-error1">Required Field</li></ul>/label>
+        <label id="label_for_##tag##_3" for="##tag##_3" class="text_field_label">Last name: <span class="required">(required)</span> <ul class="form_error" id="first_name-error"><li class="form_error" id="first_name-error1">Required Field</li></ul></label>
         <input type="text" id="##tag##_3" name="##tag##" value="" autocomplete="family-name" />
     </div>
 </div>
