@@ -30,28 +30,34 @@
 	.large_question {font-weight:bold; font-size:22px; line-height:1.0; color:rgb(8,79,140);}
 	.question_prompt {font-weight:normal; font-size:14px; color:#000;}
         .user-is-tabbing .show-on-tab {display:block!important;}
-/**************************
-Text inputs and textarea - basic outline
-**************************/
-:root {
-    --errors_color:240,0,0;
-    --fields_border_color:#757575;
-    --fields_border:1px solid var(--fields_border_color);
-    --fields_border_radius:6px;
-}
-
-/**********************
-Errors - Server validation
-***********************/
-ul.form_error { padding:0; margin:0; list-style:none; display:inline; }
-li.form_error { padding:2px 5px; margin:2px 5px; font:normal 11px/13px sans-serif; color:white; display:inline; background:rgba(var(--errors_color),1); border-radius:3px; white-space:nowrap;}
-
-.on_error_background_tint {background-color:rgba(var(--errors_color),0.15)!important;}
-.on_error_label_style {font-weight:bold;}
-.input_error {background-color:rgba(var(--errors_color),0.15)!important;}
-.select_error {background-color:rgba(var(--errors_color),0.15)!important;}
-.validated_input_text {background-image:url('https://www.envoyhub.com/images/checkmark.svg')!important; background-repeat: no-repeat; background-position:right 5px center; background-size:26px 26px;}
-
+	:root {
+	    --errors_color:240,0,0;
+	    --fields_border_color:#757575;
+	    --fields_border:1px solid var(--fields_border_color);
+	    --fields_border_radius:6px;
+	    /* define color agnostic of rgb or rgba so they work with either*/
+	    /* bright orange */ --button-color-base: 255,165,0;
+	    /* WCAG AA compliant orange --button-color-base: 211,127,0; */
+	    /* WCAG AA compliant blue --button-color-base: 34,93,156; */
+	    /* WCAG AA compliant green --button-color-base: 35,164,57; */
+	    /* WCAG AA compliant red --button-color-base: 240,0,0; */
+	}
+	ul.form_error { padding:0; margin:0; list-style:none; display:inline; }
+	li.form_error { padding:2px 5px; margin:2px 5px; font:normal 11px/13px sans-serif; color:white; display:inline; background:rgba(var(--errors_color),1); border-radius:3px; white-space:nowrap;}
+	.on_error_background_tint {background-color:rgba(var(--errors_color),0.15)!important;}
+	.on_error_label_style {font-weight:bold;}
+	.input_error {background-color:rgba(var(--errors_color),0.15)!important;}
+	.select_error {background-color:rgba(var(--errors_color),0.15)!important;}
+	.validated_input_text {background-image:url('https://www.envoyhub.com/images/checkmark.svg')!important; background-repeat: no-repeat; background-position:right 5px center; background-size:26px 26px;}
+	/* fallback for < IE11. Can't do css vars */
+	@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {  
+	    li.form_error {
+	       background:rgba(240,0,0,1);
+	    }
+	    .on_error_background_tint, .input_error {background-color:rgba(240,0,0,0.15)!important;}
+	    .select_normalized {border: 1px solid #757575; border-radius: 6px;}
+	    input[type=text],input[type=email],input[type=tel],textarea, select {border: 1px solid #757575; border-radius: 6px;}
+	}
         /* desktop */
         @media screen and (min-width: 800px) {
         .innerContent {padding:20px 0;}
@@ -97,7 +103,7 @@ li.form_error { padding:2px 5px; margin:2px 5px; font:normal 11px/13px sans-seri
 </div>
 
 <!--###############################################################-->
-<!-- CSS -->
+<!-- CSS Unique to element -->
 <!--###############################################################-->
 <style>
 /* https://www.filamentgroup.com/lab/select-css.html */
@@ -129,17 +135,6 @@ li.form_error { padding:2px 5px; margin:2px 5px; font:normal 11px/13px sans-seri
 .select_normalized option {
 	font-weight:normal;
 }
-    
-/* fallback for < IE11. Can't do css vars */
-@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {  
-    li.form_error {
-       background:rgba(240,0,0,1);
-    }
-    .on_error_background_tint, .input_error {background-color:rgba(240,0,0,0.15)!important;}
-    .select_normalized {border: 1px solid #757575; border-radius: 6px;}
-    input[type=text],input[type=email],input[type=tel],textarea, select {border: 1px solid #757575; border-radius: 6px;}
-}
-
 </style>
 
 <!--###############################################################-->
