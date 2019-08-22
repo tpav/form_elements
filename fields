@@ -1,3 +1,8 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+</head>
+<body>
 <div class="inline_fields_group"><!-- wrap in inline_fields_group for inline fields --> 
     <div id="step-##data:step_id##_##tag##" class="question_wrap text_input">
         <label id="label_for_##tag##_1" for="##tag##_1" class="text_field_label">First name: <span class="required">(required)</span> ##errors##</label>
@@ -49,3 +54,5 @@
         <option value="100000">$100,000 & Above</option>
     </select>
 </div>
+</body>
+</html>
