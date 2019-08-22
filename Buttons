@@ -100,14 +100,14 @@
 
 <h3>Button element (Preferred)</h3>
     <div style="text-align:center; display:inline-block; min-width:300px;">
-        <button class="button ripple pulse disabled">Button 
+        <button class="button ripple pulse">Button 
             <span class="button_icon" aria-hidden="true">
                 <img src="https://www.envoyhub.com/images/downward_dollar_icon_rev.svg" style="width:auto; height:17px; vertical-align:middle;" />
             </span>
             <div class="loader" role="alert"></div>
         </button>
     </div>
-    <p>Pros: Accepts click, space or enter/return and tab events, Will submit form if in form element, Allows nested elements<br />Cons: No native event outside forms<br />Remove disabled class with js if you want to keep disabled state until user initiates interaction or after client side validation.<br />Optional classes "ripple", "pulse" and "disabled. Optional icon.</p>
+    <p>Pros: Accepts click, space or enter/return and tab events, Will submit form if in form element, Allows nested elements<br />Cons: No native event outside forms<br />Remove "disabled" class with js if you want to keep disabled state until user initiates interaction or after client side validation.<br />Optional classes "ripple", "pulse" and "disabled". Optional icon.</p>
  <h3>Anchor tag</h3>
     <a class="button ripple" href="#0" tabindex="0" role="button">Anchor <span class="button_icon" aria-hidden="true"><img src="https://www.envoyhub.com/images/downward_dollar_icon_rev.svg" style="width:auto; height:17px; vertical-align:middle;" /></span><div class="loader" role="alert"></div></a>
     <p>Pros: Accepts click, enter/return, Allows nested elements<br />Cons: accessibility issues, Tab event requires tabindex="0", Have to prevent default event</p>
