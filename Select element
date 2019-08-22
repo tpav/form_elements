@@ -1,3 +1,4 @@
+<div class="question_wrap select_input">
 <label id="label_for_select" for="##tag##_select" class="text_field_label">About how much debt do you have? (OK to estimate) ##errors##</label>
     <select id="##tag##_select" class="select_normalized" name="##tag##" />
         <option value="0">Make a selection...</option>
@@ -16,6 +17,7 @@
 <!-- CSS UNique to selects -->
 <!--###############################################################-->
 <style>
+.question_wrap.select_input label {display:block; margin-top:0; padding-top:0; padding-left:3px; line-height:1.1;}
 /* https://www.filamentgroup.com/lab/select-css.html */
 .select_normalized {
 	display: block;
