@@ -119,9 +119,6 @@
 <h3>div element</h3>
     <div class="button ripple" tabindex="0" role="button">Div<div class="loader" role="alert"></div></div>
     <p>Pros: Allows nested elements<br />Cons: accessibility issues, No enter/return, tab event requires tabindex="0", Accepts click only</p>
-<pre><code class="language-markup"><script type="prism-html-markup"><div class="button ripple" tabindex="0" role="button">Div 
-    <div class="loader" role="alert"></div>
-</div>
 
 
 <!--###############################################################-->
@@ -287,4 +284,3 @@
    </script>
 </body>
 </html>
-
