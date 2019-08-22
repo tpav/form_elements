@@ -22,7 +22,7 @@
 
 
 <!--###############################################################-->
-<!-- CSS UNique to elements -->
+<!-- CSS UNique to buttons -->
 <!--###############################################################-->
 <style>
     input[type=submit], .button {
@@ -155,10 +155,10 @@
 </style>
 
 <!--###############################################################-->
-<!-- jQuery -->
+<!-- jQuery unique to buttons. Edit for production to trigger submit event... -->
 <!--###############################################################-->
 <script>
-// buttons, anchors, and divs click event. Edit for production to trigger submit event... 
+// buttons, anchors, and divs click event. 
      $('.button').on('click', function(){
         var button = $(this);
         setTimeout(function(){
