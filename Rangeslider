@@ -39,8 +39,6 @@
 	    /* WCAG AA compliant blue --button-color-base: 34,93,156; */
 	    /* WCAG AA compliant green --button-color-base: 35,164,57; */
 	    /* WCAG AA compliant red --button-color-base: 240,0,0; */
-	    --selected_color:rgb(8,79,140); /* slider */
-    	--button_color:#ff0000; /* slider */
 	}
 	ul.form_error { padding:0; margin:0; list-style:none; display:inline; }
 	li.form_error { padding:2px 5px; margin:2px 5px; font:normal 11px/13px sans-serif; color:white; display:inline; background:rgba(var(--errors_color),1); border-radius:3px; white-space:nowrap;}
@@ -118,6 +116,9 @@
 <!-- CSS UNique to elements -->
 <!--###############################################################-->
 <style>
+:root {
+  --rangeslider_key_color:rgb(8,79,140); /* slider */
+}
 slider_elements {padding:1px 0 60px 0;}
 .rangeslider, .rangeslider__fill {
   display: block;
@@ -149,10 +150,10 @@ slider_elements {padding:1px 0 60px 0;}
 }
 
 .rangeslider__fill {
-  background: -webkit-linear-gradient(left, var(--selected_color), var(--selected_color));
-  background: -o-linear-gradient(right, var(--selected_color), var(--selected_color));
-  background: -moz-linear-gradient(right, var(--selected_color), var(--selected_color));
-  background: linear-gradient(to right, var(--selected_color), var(--selected_color));
+  background: -webkit-linear-gradient(left, var(--rangeslider_key_color), var(--rangeslider_key_color));
+  background: -o-linear-gradient(right, var(--rangeslider_key_color), var(--rangeslider_key_color));
+  background: -moz-linear-gradient(right, var(--rangeslider_key_color), var(--rangeslider_key_color));
+  background: linear-gradient(to right, var(--rangeslider_key_color), var(--rangeslider_key_color));
   position: absolute;
 }
 
@@ -190,7 +191,7 @@ transition: transform 0.25s ease-in-out;
   font-family: FontAwesome;
   /*content: "\f0d9\00a0\f0da";*/
   content: "\25c2\00a0\25b8";
-  color: var(--selected_color);
+  color: var(--rangeslider_key_color);
 }
 
 .rangeslider__handle {
@@ -293,7 +294,7 @@ input[type="range"]:focus +  .rangeslider .rangeslider__handle {
   display: inline-block;
   width: 15px;
   height: 15px;
-  background:var(--selected_color);
+  background:var(--rangeslider_key_color);
   border-radius: 20px;
   vertical-align: middle;
 }
