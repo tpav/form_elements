@@ -102,7 +102,7 @@
 
 
 
-<!-- TYYPICAL STRUCTURE -->
+<!-- TYPICAL STRUCTURE -->
 
 <div id="wrapper">
 <!-- HEADER CONTENT TAB -->
@@ -112,16 +112,17 @@
                 ...
                 <input type="hidden" name="lead_id" value="">
                 
-                <!-- fields -->
+                <!-- FIELDS TABS -->
                 <div class="question-wrap">
                     <label class="field" for="##tag##">Email <span class="question-prompt">required</span></label>
                     <input type="email" name="##tag##" id="##tag##" value="email" placeholder="Your email">
                 </div>
+		<!-- ADD YOUR OWN BUTTON IN LAST FIELD -->
                 <div class="submit_button_wrap">
                     <button class="submit_button">Continue</button>
                 </div>
                 
-                <!-- submit appended -->
+                <!-- submit auto appended -->
                 <div id="form_submit_button">
                     <input type="submit" name="tsubmit" id="submit-save_button" value="Submit">
                 </div>
