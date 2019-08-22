@@ -96,3 +96,180 @@
 	<script type="text/javascript" src="https://www.envoyhub.com/js/form_helpers.js"></script>
 </head>
 <body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--###############################################################-->
+<!-- CSS UNique to elements -->
+<!--###############################################################-->
+<style>
+    :root {
+    /* define color agnostic of rgb or rgba so they work with either*/
+    /* bright orange */ --button-color-base: 255,165,0;
+    /* WCAG AA compliant orange --button-color-base: 211,127,0; */
+    /* WCAG AA compliant blue --button-color-base: 34,93,156; */
+    /* WCAG AA compliant green --button-color-base: 35,164,57; */
+    /* WCAG AA compliant red --button-color-base: 240,0,0; */
+    }
+
+    input[type=submit], .button {
+      -webkit-appearance: none;
+      appearance: none;
+      display:inline-block;
+      font-family:'Assistant',sans-serif;
+      text-decoration:none;
+      border:0;
+      padding: 17px 25px;
+      margin:10px;
+      text-align: center;
+      border-radius: 8px;
+      background-color: rgb(var(--button-color-base));
+      color: #fff;
+      letter-spacing: 0px;
+      text-shadow: none;
+      font-size: 22px;
+      line-height:1;
+      font-weight: bold;
+      cursor: pointer;
+      opacity:1;
+      min-width:245px;
+      box-shadow: 0px 4px 15px 0px rgba(var(--button-color-base),0.4);
+      transition-property: min-width, transform, border-radius;
+      transition-duration: 0.0s;
+      transition-timing-function: linear;
+      transform-origin:center center;
+      position:relative;
+      overflow:hidden;
+}
+
+.button_active_fancy {pointer-events:none; transition-duration: 0.3s; padding:13px; min-width:0px; border-radius:100px; font-size:0;}
+.button_active_fancy img {display:none;}
+.button.button_active_fancy .loader {display:block;}
+.button_darken {filter:brightness(75%); pointer-events:none;}
+.button.disabled, input[type=submit].disabled {opacity:0.5!important; filter:blur(0.65px); box-shadow:none!important; pointer-events:none!important; animation:none!important;}
+
+/* click/touch effect */
+.ripple {
+  transform: translate3d(0, 0, 0);
+}
+.ripple:after {
+  content:'';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-image: radial-gradient(circle, #fff 10%, transparent 10.01%);
+  background-repeat: no-repeat;
+  background-position: 50%;
+  transform: scale(10, 10);
+  opacity: 0;
+  transition: transform .5s, opacity 1s;
+}
+.ripple:active:after {
+  transform: scale(0, 0);
+  opacity: .3;
+  transition: 0s;
+}
+
+/* spinner on button click */
+.button .loader,
+.button .loader:after {
+  border-radius: 50%;
+  width: 3em;
+  height: 3em;
+}
+.button .loader {
+  display:none;
+  font-size:10px;
+  margin: 0 auto;
+  position: relative;
+  border-top: 0.4em solid rgba(255, 255, 255, 0.4);
+  border-right: 0.4em solid rgba(255, 255, 255, 0.4);
+  border-bottom: 0.4em solid rgba(255, 255, 255, 0.4);
+  border-left: 0.4em solid #ffffff;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation: load8 0.7s infinite linear;
+  animation: load8 0.7s infinite linear;
+}
+@-webkit-keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.pulse {box-shadow:0px 4px 15px 0px rgba(var(--button-color-base),0.4), 0px 0px 0px 0px rgba(var(--button-color-base),0.0); -webkit-animation: pulseButton 3s infinite;}
+        
+@-webkit-keyframes pulseButton {
+ 0% {
+    transform: scale(1);
+    box-shadow:0px 4px 15px 0px rgba(var(--button-color-base),0.4), 0px 0px 0px 0px rgba(var(--button-color-base),0.5);
+  }
+  30% {
+    transform: scale(1);
+    box-shadow:0px 4px 15px 0px rgba(var(--button-color-base),0.4), 0px 0px 10px 20px rgba(var(--button-color-base),0.0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow:0px 4px 15px 0px rgba(var(--button-color-base),0.4), 0px 0px 0px 0px rgba(var(--button-color-base),0.0);
+  }
+}
+
+/* fallback for < IE11. Can't do css vars */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {  
+  input[type=submit], .button {
+       background-color: rgb(211,127,0);
+  }
+}
+
+
+/**************************
+Text inputs and textarea - basic outline
+**************************/
+.inline_fields_group {display:flex; align-items:flex-end; justify-content:space-between;}
+.inline_fields_group .question_wrap  {flex:0 1 auto; padding-right:1vh!important;}
+.inline_fields_group .question_wrap:last-of-type {padding-right:0!important;}
+.question_wrap {margin-bottom:1.4vh; width:100%;}
+.text_field_label { margin:8px 0 2px 0; font-size:15px;}
+input[type=text],input[type=email],input[type=tel],textarea {-webkit-appearance: none; padding:1.1vh; width:100%; margin:4px 0; font-size:16px; border:var(--fields_border); background-color:#fff; background-image:none; border-radius:var(--fields_border_radius);}
+#zip {max-width:150px;}
+.question_wrap.text_input label,.question_wrap.select_input label {display:block; margin-top:0; padding-top:0; padding-left:3px; line-height:1.1;}
+textarea {font-size:16px;}
+</style>
+
+<!--###############################################################-->
+<!-- jQuery -->
+<!--###############################################################-->
+
+
+</body>
+</html>
+
