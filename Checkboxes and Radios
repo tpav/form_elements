@@ -38,6 +38,9 @@ Sort out unique IDs, ##errors##, etc after pasting...
     </div>
 </fieldset>
 
+<!--###############################################################-->
+<!-- CSS UNique to checkboxes and radios -->
+<!--###############################################################-->
 <style>
 /* only way to set SVG background color */
 <?php $checked_color = 'rgba(8,79,140,1)';?>
