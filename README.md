@@ -9,3 +9,5 @@
 [Checkboxes and Radios preview](https://www.envoyhub.com/style-guide-checkboxes-and-radios.html) - JS optional 
 
 [Slider](https://www.envoyhub.com/style-guide-slider.html) - form_helpers.js
+
+Template is common to all forms, include styles and js contained in HEAD.
