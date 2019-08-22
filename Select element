@@ -1,5 +1,5 @@
-<div id="step-##data:step_id##_##tag##" class="question_wrap select_input">
-    <label id="label_for_select" for="##tag##_select" class="text_field_label">About how much debt do you have? (OK to estimate) <ul class="form_error" id="first_name-error"><li class="form_error" id="first_name-error1">Required Field</li></ul></label>
+s<div id="step-##data:step_id##_##tag##" class="question_wrap select_input">
+    <label id="label_for_select" for="##tag##_select" class="text_field_label">About how much debt do you have? (OK to estimate) ##errors##</label>
     <select id="##tag##_select" class="select_normalized" name="##tag##" />
         <option value="0">Make a selection...</option>
         <option value="7500">$7,500 - $9,999</option>
