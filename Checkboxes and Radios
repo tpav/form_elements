@@ -42,7 +42,7 @@ Sort out unique IDs, ##errors##, etc after pasting...
 <!-- CSS UNique to checkboxes and radios -->
 <!--###############################################################-->
 <style>
-/* only way to set SVG background color */
+/* only way to set SVG background color, match to --key_color */
 <?php $checked_color = 'rgba(8,79,140,1)';?>
 :root {
     --checked_color:var(--key_color);
