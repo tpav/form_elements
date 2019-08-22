@@ -44,11 +44,9 @@
     </style>
 </head>
 <body>
-<?php
-$errors_sample = '<ul class="form_error" id="first_name-error"><li class="form_error" id="first_name-error1">Required Field</li></ul>';
-?>
-
-
+<!--###############################################################-->
+<!-- HTML -->
+<!--###############################################################-->
 <div class="inline_fields_group"><!-- wrap in inline_fields_group for inline fields --> 
     <div id="step-##data:step_id##_##tag##" class="question_wrap text_input">
         <label id="label_for_##tag##_1" for="##tag##_1" class="text_field_label">First name: <span class="required">(required)</span> ##errors##</label>
@@ -59,7 +57,7 @@ $errors_sample = '<ul class="form_error" id="first_name-error"><li class="form_e
         <input type="text" id="##tag##_2" name="##tag##" value="" autocomplete="additional-name" />
     </div>
     <div id="step-##data:step_id##_##tag##" class="question_wrap text_input">
-        <label id="label_for_##tag##_3" for="##tag##_3" class="text_field_label">Last name: <span class="required">(required)</span> <?=$errors_sample?></label>
+        <label id="label_for_##tag##_3" for="##tag##_3" class="text_field_label">Last name: <span class="required">(required)</span> <ul class="form_error" id="first_name-error"><li class="form_error" id="first_name-error1">Required Field</li></ul>/label>
         <input type="text" id="##tag##_3" name="##tag##" value="" autocomplete="family-name" />
     </div>
 </div>
@@ -76,17 +74,17 @@ $errors_sample = '<ul class="form_error" id="first_name-error"><li class="form_e
 </div>
 
 <div id="step-##data:step_id##_##tag##" class="question_wrap text_input">
-    <label id="label_for_zip" for="zip" class="text_field_label">Zip: <span class="required">(required)</span> <?=$errors_sample?></label>
+    <label id="label_for_zip" for="zip" class="text_field_label">Zip: <span class="required">(required)</span> <ul class="form_error" id="first_name-error"><li class="form_error" id="first_name-error1">Required Field</li></ul></label>
     <input type="tel" id="zip" name="zip" value="" autocomplete="postal-code" maxlength="5" />
 </div>
 
 <div id="step-##data:step_id##_##tag##" class="question_wrap text_input">
-    <label id="label_for_notes" for="notes" class="text_field_label">Anything we should know about your situation? <?=$errors_sample?></label>
+    <label id="label_for_notes" for="notes" class="text_field_label">Anything we should know about your situation? <ul class="form_error" id="first_name-error"><li class="form_error" id="first_name-error1">Required Field</li></ul></label>
     <textarea id="notes" name="notes" placeholder="Comments? (optional)" style="height:100px;" /></textarea>
 </div>
 
 <div id="step-##data:step_id##_##tag##" class="question_wrap select_input">
-    <label id="label_for_select" for="##tag##_select" class="text_field_label">About how much debt do you have? (OK to estimate) </label>
+    <label id="label_for_select" for="##tag##_select" class="text_field_label">About how much debt do you have? (OK to estimate) ##errors##</label>
     <select id="##tag##_select" class="select_normalized" name="##tag##" />
         <option value="0">Make a selection...</option>
         <option value="7500">$7,500 - $9,999</option>
@@ -101,9 +99,10 @@ $errors_sample = '<ul class="form_error" id="first_name-error"><li class="form_e
     </select>
 </div>
 
-
+<!--###############################################################-->
+<!-- CSS -->
+<!--###############################################################-->
 <style>
-     
     :root {
     /* define color agnostic of rgb or rgba so they work with either*/
     /* bright orange */ --button-color-base: 255,165,0;
@@ -336,5 +335,17 @@ color:#999;
 }
 
 </style>
+
+<!--###############################################################-->
+<!-- jQuery -->
+<!--###############################################################-->
+<script>
+// OPTIONAL style label and field if server validation error is present
+$(function(){
+    $('.form_error').parent().addClass('on_error_label_style');
+    $('.form_error').parent().next('input').addClass('on_error_background_tint');
+})
+</script>
+
 </body>
 </html>
