@@ -95,22 +95,6 @@
     <textarea id="notes" name="notes" placeholder="Comments? (optional)" style="height:100px;" /></textarea>
 </div>
 
-<div id="step-##data:step_id##_##tag##" class="question_wrap select_input">
-    <label id="label_for_select" for="##tag##_select" class="text_field_label">About how much debt do you have? (OK to estimate) ##errors##</label>
-    <select id="##tag##_select" class="select_normalized" name="##tag##" />
-        <option value="0">Make a selection...</option>
-        <option value="7500">$7,500 - $9,999</option>
-        <option value="10000">$10,000 - $14,999</option>
-        <option value="15000">$15,000 - $19,999</option>
-        <option value="20000">$20,000 - $24,999</option>
-        <option value="25000">$25,000 - $34,999</option>
-        <option value="35000">$35,000 - $49,999</option>
-        <option value="50000">$50,000 - $74,999</option>
-        <option value="75000">$75,000 - $99,999</option>
-        <option value="100000">$100,000 & Above</option>
-    </select>
-</div>
-
 <!--###############################################################-->
 <!-- CSS -->
 <!--###############################################################-->
@@ -302,38 +286,6 @@ color:#999;
 }
 ::-ms-input-placeholder { /* Microsoft Edge */
 color:#999;
-}
-
-
-/* https://www.filamentgroup.com/lab/select-css.html */
-.select_normalized {
-	display: block;
-	font-size:16px;
-	font-family: sans-serif;
-	font-weight: normal;
-	color: #000;
-	line-height: 1.3;
-	padding: 1.1vh;
-	width: 100%;
-	max-width: 100%;
-	box-sizing: border-box;
-	margin:4px 0;
-	border: var(--fields_border);
-	border-radius: var(--fields_border_radius);
-	-moz-appearance: none;
-	-webkit-appearance: none;
-	appearance: none;
-	background-color: #fff;
-	background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23000000%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E');
-	background-repeat: no-repeat, repeat;
-	background-position: right .7em top 50%, 0 0;
-	background-size: .65em auto, 100%;
-}
-.select_normalized::-ms-expand {
-	display: none;
-}
-.select_normalized option {
-	font-weight:normal;
 }
     
 /* fallback for < IE11. Can't do css vars */
