@@ -45,7 +45,7 @@ Sort out unique IDs, ##errors##, etc after pasting...
 /* only way to set SVG background color */
 <?php $checked_color = 'rgba(8,79,140,1)';?>
 :root {
-    --checked_color:8,79,140;
+    --checked_color:var(--key_color);
     --checkradio_size:32px;
     --checkradio_label_size:calc(var(--checkradio_size) * 0.6);
     --checkradio_space_between:calc(var(--checkradio_size) * 0.4);
