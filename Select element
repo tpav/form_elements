@@ -1,5 +1,4 @@
-s<div id="step-##data:step_id##_##tag##" class="question_wrap select_input">
-    <label id="label_for_select" for="##tag##_select" class="text_field_label">About how much debt do you have? (OK to estimate) ##errors##</label>
+<label id="label_for_select" for="##tag##_select" class="text_field_label">About how much debt do you have? (OK to estimate) ##errors##</label>
     <select id="##tag##_select" class="select_normalized" name="##tag##" />
         <option value="0">Make a selection...</option>
         <option value="7500">$7,500 - $9,999</option>
@@ -12,7 +11,6 @@ s<div id="step-##data:step_id##_##tag##" class="question_wrap select_input">
         <option value="75000">$75,000 - $99,999</option>
         <option value="100000">$100,000 & Above</option>
     </select>
-</div>
 
 <!--###############################################################-->
 <!-- CSS UNique to selects -->
