@@ -1,3 +1,4 @@
+Sort out unique IDs, ##errors##, etc after pasting...
 <fieldset>
     <legend class="large_question">What types of debt do you have? <span class="question_prompt">(select all that apply)</span> <?=$errors_sample?></legend>
     <div id="step-##data:step_id##_##tag##" class="question_wrap">
