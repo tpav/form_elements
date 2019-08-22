@@ -1,0 +1,249 @@
+<html lang="en">
+<head>
+    <link rel="canonical" href="##canonical##" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>##title##</title>
+    <meta name="keywords" content="##meta_keywords##" />
+    <meta name="description" content="##meta_description##" />
+    <link href="https://fonts.googleapis.com/css?family=Assistant:400,600,700,800" rel="stylesheet">
+    <style>
+        /* mobile first */
+        html { box-sizing: border-box;}
+	*, *:before, *:after {box-sizing: inherit;}
+	html,body {background:#fff; margin:0 padding:0; hyphens:auto; -ms-hyphens:auto; -webkit-hyphens:auto; line-height:1.3; font-size:16px;}
+	html,body,input,textarea,select,button {font-family: 'Assistant', sans-serif; -webkit-text-size-adjust: 100%; }
+	* {outline:none;}
+	.user-is-tabbing a:focus,
+	.user-is-tabbing button:focus,
+	.user-is-tabbing input:focus,
+	.user-is-tabbing textarea:focus,
+	.user-is-tabbing
+	.rangeslider__remote_handle:before,
+	.user-is-tabbing .select_normalized:focus
+	{
+	  outline: auto 2px Highlight!important; 
+	  outline: auto 5px -webkit-focus-ring-color!important;
+	  outline: auto 5px -ms-focus-ring-color!important;
+	}
+	.large_question {font-weight:bold; font-size:22px; line-height:1.0; color:rgb(8,79,140);}
+	.question_prompt {font-weight:normal; font-size:14px; color:#000;}
+        .user-is-tabbing .show-on-tab {display:block!important;}
+	:root {
+	    --errors_color:240,0,0;
+	    --fields_border_color:#757575;
+	    --fields_border:1px solid var(--fields_border_color);
+	    --fields_border_radius:6px;
+	    /* define color agnostic of rgb or rgba so they work with either*/
+	    /* bright orange */ --button-color-base: 255,165,0;
+	    /* WCAG AA compliant orange --button-color-base: 211,127,0; */
+	    /* WCAG AA compliant blue --button-color-base: 34,93,156; */
+	    /* WCAG AA compliant green --button-color-base: 35,164,57; */
+	    /* WCAG AA compliant red --button-color-base: 240,0,0; */
+	}
+	ul.form_error { padding:0; margin:0; list-style:none; display:inline; }
+	li.form_error { padding:2px 5px; margin:2px 5px; font:normal 11px/13px sans-serif; color:white; display:inline; background:rgba(var(--errors_color),1); border-radius:3px; white-space:nowrap;}
+	.on_error_background_tint {background-color:rgba(var(--errors_color),0.15)!important;}
+	.on_error_label_style {font-weight:bold;}
+	.input_error {background-color:rgba(var(--errors_color),0.15)!important;}
+	.select_error {background-color:rgba(var(--errors_color),0.15)!important;}
+	.validated_input_text {background-image:url('https://www.envoyhub.com/images/checkmark.svg')!important; background-repeat: no-repeat; background-position:right 5px center; background-size:26px 26px;}
+	/* fallback for < IE11. Can't do css vars */
+	@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {  
+	    li.form_error {
+	       background:rgba(240,0,0,1);
+	    }
+	    .on_error_background_tint, .input_error {background-color:rgba(240,0,0,0.15)!important;}
+	    .select_normalized {border: 1px solid #757575; border-radius: 6px;}
+	    input[type=text],input[type=email],input[type=tel],textarea, select {border: 1px solid #757575; border-radius: 6px;}
+	}
+	::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+	color:#999;
+	}
+	:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+	color:#999;
+	opacity:1;
+	}
+	::-moz-placeholder { /* Mozilla Firefox 19+ */
+	color:#999;
+	opacity:1;
+	}
+	:-ms-input-placeholder { /* Internet Explorer 10-11 */
+	color:#999;
+	}
+	::-ms-input-placeholder { /* Microsoft Edge */
+	color:#999;
+	}
+        /* desktop */
+        @media screen and (min-width: 800px) {
+        .innerContent {padding:20px 0;}
+        html,body {margin:20px!important;}
+        }
+
+        /* smallish Androids 360 and down */
+        @media screen and (max-width: 360px) {
+
+        }
+
+        /* minimal rules for tablets */
+        @media screen and (min-width: 768px) and (max-width: 799px) {
+
+        }
+    </style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script type="text/javascript" src="https://www.envoyhub.com/js/hammer.min.js"></script>
+	<script type="text/javascript" src="https://www.envoyhub.com/js/jquery.hammer.js"></script>
+	<script type="text/javascript" src="https://www.envoyhub.com/js/form_helpers.js"></script>
+</head>
+<body>
+<fieldset>
+    <legend class="large_question">What types of debt do you have? <span class="question_prompt">(select all that apply)</span> <?=$errors_sample?></legend>
+    <div id="step-##data:step_id##_##tag##" class="question_wrap">
+        <div class="checkradio_input">
+            <input type="checkbox" class="checkradio" id="##tag##_101" name="##tag##[]" value="Credit Card Debt" />
+            <label id="label_for_##tag##_10" for="##tag##_101" class="checkradio_label">Credit Card Debt</label>
+        </div>
+        <div class="checkradio_input">
+            <input type="checkbox" class="checkradio" id="##tag##_111" name="##tag##[]" value="Student Loan Debt" />
+            <label id="label_for_##tag##_10" for="##tag##_111" class="checkradio_label">Student Loan Debt</label>
+        </div>
+        <div class="checkradio_input">
+            <input type="checkbox" class="checkradio" id="##tag##_121" name="##tag##[]" value="Tax Debt" />
+            <label id="label_for_##tag##_10" for="##tag##_121" class="checkradio_label">Tax Debt</label>
+        </div>
+        <div class="checkradio_input">
+            <input type="checkbox" class="checkradio" id="##tag##_131" name="##tag##[]" value="Other Debt" />
+            <label id="label_for_##tag##_10" for="##tag##_131" class="checkradio_label">Other Debt</label>
+        </div>
+    </div>
+</fieldset>
+<fieldset>
+    <legend>Are you behind on your payments?</legend>
+    <div id="step-##data:step_id##_##tag##" class="question_wrap">
+        <div class="checkradio_input">
+            <input type="radio" class="checkradio" id="##tag##_141" name="##tag##" value="1" />
+            <label id="label_for_##tag##_10" for="##tag##_141" class="checkradio_label">Yes</label>
+        </div>
+        <div class="checkradio_input">
+            <input type="radio" class="checkradio" id="##tag##_151" name="##tag##" value="0" />
+            <label id="label_for_##tag##_10" for="##tag##_151" class="checkradio_label">No</label>
+        </div>
+        <div class="checkradio_input">
+            <input type="radio" class="checkradio" id="##tag##_161" name="##tag##" value="3" />
+            <label id="label_for_##tag##_10" for="##tag##_161" class="checkradio_label">Not Sure</label>
+        </div>
+    </div>
+</fieldset>
+
+
+<!--###############################################################-->
+<!-- CSS UNique to elements -->
+<!--###############################################################-->
+<style>
+/* only way to set SVG background color */
+<?php $checked_color = 'rgba(8,79,140,1)';?>
+:root {
+    --checked_color:8,79,140;
+    --checkradio_size:32px;
+    --checkradio_label_size:calc(var(--checkradio_size) * 0.6);
+    --checkradio_space_between:calc(var(--checkradio_size) * 0.4);
+}
+.checkradio_input:first-of-type {margin-top:0;}
+.checkradio_input {margin:20px 0;} /* IE fallback */
+.checkradio_input {margin:var(--checkradio_space_between) 0;}
+.checkradio_input:last-of-type {margin-bottom:0;}
+legend {
+    display: table;
+    font-size:16px;
+    font-weight:bold;
+    float: left;
+    margin: 0;
+    padding: 0 0 15px 0;
+    width: 100%;
+    
+}
+fieldset {
+  border: 0;
+  border-radius:6px;
+  padding: 15px 10px 10px 15px;
+  margin: 0 0 0 -15px;
+  min-width: 0;
+}
+body:not(:-moz-handler-blocked) fieldset {
+  display: table-cell;
+}
+
+/* Edge and IE will use system styles */
+@supports(-webkit-appearance: none) {
+ 	.checkradio {
+		-webkit-appearance: none;
+		width: var(--checkradio_size);
+		height: var(--checkradio_size);
+		border: 2px solid var(--fields_border_color);
+		position: relative;
+		background: #fff;
+		outline:none;
+		vertical-align:middle;
+	}
+	.checkradio + label {vertical-align:middle; padding-left:3px; font-size:var(--checkradio_label_size);}
+	.checkradio:checked {
+		background:rgba(var(--checked_color),1);
+		border-color:rgba(var(--checked_color),1);
+	}
+	input[type="checkbox"].checkradio,input[type="checkbox"].checkradio:not(:checked)::after, input[type="checkbox"].checkradio:checked::after {
+		border-radius: 4px;
+		transition:all .3s;
+	}
+	input[type="radio"].checkradio,input[type="radio"].checkradio:not(:checked)::after, input[type="radio"].checkradio:checked::after {
+		border-radius: 50%;
+		transition:all .3s;
+	}
+	.checkradio:not(:checked)::after,.checkradio:checked::after {
+		position: absolute;
+		transform-origin:center center;
+		top: 0; 
+		right:0;
+		bottom:0;
+		left: 0;
+		content: "";
+		background-image: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20512%20512%22%3E%3Ccircle%20cx%3D%22256.9%22%20cy%3D%22256.2%22%20r%3D%22246.7%22%20fill%3D%22%23fff%22%2F%3E%3Cpath%20d%3D%22M257%209.5C120.7%209.5%2010.2%20120%2010.2%20256.2S120.7%20503%20257%20503s246.7-110.5%20246.7-246.8S393.2%209.5%20257%209.5zm168.5%20175.7L284.8%20337.9l-44.3%2048c-4.2%204.5-11.2%204.5-15.5%200L180.3%20338l-73.8-79c-4.4-4.5-4.4-12.1-.2-16.7l36.5-39.7c4.2-4.5%2011.2-4.5%2015.5%200l66.2%2070.6c4.2%204.7%2011.2%204.5%2015.5%200l133-144.3c4.2-4.5%2011.1-4.5%2015.3%200l37%2039.6c4.4%204.5%204.4%2012.1.2%2016.7z%22%20fill%3D%22<?= urlencode($checked_color)?>%22%2F%3E%3C%2Fsvg%3E');
+		background-repeat:no-repeat;
+		background-size:calc(var(--checkradio_size) * 1.05);
+		background-position:65% 45%;
+	}
+	.checkradio:not(:checked)::after {
+		opacity:0;
+		transform:scale(0);
+	}
+	.checkradio:checked::after {
+		opacity:1;
+		transform:scale(1);
+		-webkit-animation:onClickCheckRadio 0.3s forwards;
+	}
+	@-webkit-keyframes onClickCheckRadio {
+		0% {
+			box-shadow:0 0 0px 0px rgba(var(--checked_color),0);
+		}
+		30% {
+			box-shadow:0 0 0px 30px rgba(var(--checked_color),.5);
+		}
+		100% {
+			box-shadow:0 0 0px 20px rgba(var(--checked_color),0);
+		}
+	}
+}
+</style>
+
+<!--###############################################################-->
+<!-- jQuery -->
+<!--###############################################################-->
+<script>
+// OPTIONAL style label and field if server validation error is present
+$(function(){
+	$('.form_error').parent().addClass('on_error_label_style');
+	$('.form_error').parent().next('input, select, textarea').addClass('on_error_background_tint');
+	$('.form_error').closest('fieldset').addClass('on_error_background_tint');
+})
+</script>
+</body>
+</html>
