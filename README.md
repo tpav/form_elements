@@ -1,11 +1,11 @@
 # Form Elements
 
-[Buttons preview](https://htmlpreview.github.io/?https://github.com/tpav/form_elements/blob/master/Buttons) - JS for animation and submit
+[Buttons preview](https://www.envoyhub.com/style-guide-buttons.html) - JS for animation and submit
 
-[Fields preview](https://htmlpreview.github.io/?https://github.com/tpav/form_elements/blob/master/Field%20elements) - optional JS
+[Fields preview](https://www.envoyhub.com/style-guide-fields.html) - JS optional 
 
-[Select preview](https://htmlpreview.github.io/?https://github.com/tpav/form_elements/blob/master/Select%20element) - optional JS
+[Select preview](https://www.envoyhub.com/style-guide-select.html) - JS optional 
 
-[Checkboxes and Radios preview](https://htmlpreview.github.io/?https://github.com/tpav/form_elements/blob/master/Checkboxes%20and%20Radios) - optional JS
+[Checkboxes and Radios preview](https://www.envoyhub.com/style-guide-checkboxes-and-radios.html) - JS optional 
 
-Javascript doesn't run in preview. Alternately copy and paste code to envoyhub.com/sim.html as a preview option.
+[Slider](https://www.envoyhub.com/style-guide-slider.html) - form_helpers.js
