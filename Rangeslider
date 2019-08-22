@@ -20,7 +20,7 @@
 <!--###############################################################-->
 <style>
 :root {
-  --rangeslider_key_color:rgb(--key_color); /* slider */
+  --rangeslider_key_color:rgb(var(--key_color)); /* slider */
 }
 .slider_elements {padding:1px 0 60px 0;}
 .rangeslider, .rangeslider__fill {
