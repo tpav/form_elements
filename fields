@@ -1,0 +1,51 @@
+<div class="inline_fields_group"><!-- wrap in inline_fields_group for inline fields --> 
+    <div id="step-##data:step_id##_##tag##" class="question_wrap text_input">
+        <label id="label_for_##tag##_1" for="##tag##_1" class="text_field_label">First name: <span class="required">(required)</span> ##errors##</label>
+        <input type="text" id="##tag##_1" name="##tag##" value="" autocomplete="given-name" />
+    </div>
+    <div id="step-##data:step_id##_##tag##" class="question_wrap text_input">
+        <label id="label_for_##tag##_2" for="##tag##_2" class="text_field_label">Middle name:</label>
+        <input type="text" id="##tag##_2" name="##tag##" value="" autocomplete="additional-name" />
+    </div>
+    <div id="step-##data:step_id##_##tag##" class="question_wrap text_input">
+        <label id="label_for_##tag##_3" for="##tag##_3" class="text_field_label">Last name: <span class="required">(required)</span> <?=$errors_sample?></label>
+        <input type="text" id="##tag##_3" name="##tag##" value="" autocomplete="family-name" />
+    </div>
+</div>
+
+
+<div id="step-##data:step_id##_##tag##" class="question_wrap text_input">
+    <label id="label_for_##tag##_4" for="##tag##_4" class="text_field_label">Phone: <span class="required">(required)</span> ##errors##</label>
+    <input type="tel" id="##tag##_4" name="##tag##" value="" autocomplete="tel" placeholder="XXX-XXX-XXXX" />
+</div>
+
+<div id="step-##data:step_id##_##tag##" class="question_wrap text_input">
+    <label id="label_for_##tag##_5" for="##tag##_5" class="text_field_label">Email: <span class="required">(required)</span> ##errors##</label>
+    <input type="email" id="##tag##_5" name="##tag##" value="test@envoymediagroup.com" autocomplete="email" class="validated_input_text" />
+</div>
+
+<div id="step-##data:step_id##_##tag##" class="question_wrap text_input">
+    <label id="label_for_zip" for="zip" class="text_field_label">Zip: <span class="required">(required)</span> <?=$errors_sample?></label>
+    <input type="tel" id="zip" name="zip" value="" autocomplete="postal-code" maxlength="5" />
+</div>
+
+<div id="step-##data:step_id##_##tag##" class="question_wrap text_input">
+    <label id="label_for_notes" for="notes" class="text_field_label">Anything we should know about your situation? <?=$errors_sample?></label>
+    <textarea id="notes" name="notes" placeholder="Comments? (optional)" style="height:100px;" /></textarea>
+</div>
+
+<div id="step-##data:step_id##_##tag##" class="question_wrap select_input">
+    <label id="label_for_select" for="##tag##_select" class="text_field_label">About how much debt do you have? (OK to estimate) </label>
+    <select id="##tag##_select" class="select_normalized" name="##tag##" />
+        <option value="0">Make a selection...</option>
+        <option value="7500">$7,500 - $9,999</option>
+        <option value="10000">$10,000 - $14,999</option>
+        <option value="15000">$15,000 - $19,999</option>
+        <option value="20000">$20,000 - $24,999</option>
+        <option value="25000">$25,000 - $34,999</option>
+        <option value="35000">$35,000 - $49,999</option>
+        <option value="50000">$50,000 - $74,999</option>
+        <option value="75000">$75,000 - $99,999</option>
+        <option value="100000">$100,000 & Above</option>
+    </select>
+</div>
