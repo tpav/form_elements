@@ -18,8 +18,7 @@
 	.user-is-tabbing button:focus,
 	.user-is-tabbing input:focus,
 	.user-is-tabbing textarea:focus,
-	.user-is-tabbing
-	.rangeslider__remote_handle:before,
+	.user-is-tabbing .rangeslider__remote_handle.focused,
 	.user-is-tabbing .select_normalized:focus
 	{
 	  outline: auto 2px Highlight!important; 
