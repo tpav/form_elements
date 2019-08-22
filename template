@@ -29,14 +29,12 @@
 	  outline: auto 5px -webkit-focus-ring-color!important;
 	  outline: auto 5px -ms-focus-ring-color!important;
 	}
-	.large_question {font-weight:bold; font-size:22px; line-height:1.0; color:rgb(8,79,140);}
-	.question_prompt {font-weight:normal; font-size:14px; color:#000;}
-        .user-is-tabbing .show-on-tab {display:block!important;}
 	:root {
 	    --errors_color:240,0,0;
 	    --fields_border_color:#757575;
 	    --fields_border:1px solid var(--fields_border_color);
 	    --fields_border_radius:6px;
+	    --key_color:8,79,140; /* question, checked state, slider progress, etc. (NOT BUTTON)*/
 	    /* define color agnostic of rgb or rgba so they work with either*/
 	    /* bright orange */ --button-color-base: 255,165,0;
 	    /* WCAG AA compliant orange --button-color-base: 211,127,0; */
@@ -44,6 +42,9 @@
 	    /* WCAG AA compliant green --button-color-base: 35,164,57; */
 	    /* WCAG AA compliant red --button-color-base: 240,0,0; */
 	}
+	.large_question {font-weight:bold; font-size:22px; line-height:1.0; color:rgb(var(--key_color));}
+	.question_prompt {font-weight:normal; font-size:14px; color:#000;}
+        .user-is-tabbing .show-on-tab {display:block!important;}
 	ul.form_error { padding:0; margin:0; list-style:none; display:inline; }
 	li.form_error { padding:2px 5px; margin:2px 5px; font:normal 11px/13px sans-serif; color:white; display:inline; background:rgba(var(--errors_color),1); border-radius:3px; white-space:nowrap;}
 	.on_error_background_tint {background-color:rgba(var(--errors_color),0.15)!important;}
@@ -79,18 +80,15 @@
 	}
         /* desktop */
         @media screen and (min-width: 800px) {
-        .innerContent {padding:20px 0;}
-        html,body {margin:20px!important;}
+	
         }
-
         /* smallish Androids 360 and down */
         @media screen and (max-width: 360px) {
 
         }
-
         /* minimal rules for tablets */
         @media screen and (min-width: 768px) and (max-width: 799px) {
-
+	
         }
     </style>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
