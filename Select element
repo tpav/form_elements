@@ -30,6 +30,27 @@
 	.large_question {font-weight:bold; font-size:22px; line-height:1.0; color:rgb(8,79,140);}
 	.question_prompt {font-weight:normal; font-size:14px; color:#000;}
         .user-is-tabbing .show-on-tab {display:block!important;}
+/**************************
+Text inputs and textarea - basic outline
+**************************/
+:root {
+    --errors_color:240,0,0;
+    --fields_border_color:#757575;
+    --fields_border:1px solid var(--fields_border_color);
+    --fields_border_radius:6px;
+}
+
+/**********************
+Errors - Server validation
+***********************/
+ul.form_error { padding:0; margin:0; list-style:none; display:inline; }
+li.form_error { padding:2px 5px; margin:2px 5px; font:normal 11px/13px sans-serif; color:white; display:inline; background:rgba(var(--errors_color),1); border-radius:3px; white-space:nowrap;}
+
+.on_error_background_tint {background-color:rgba(var(--errors_color),0.15)!important;}
+.on_error_label_style {font-weight:bold;}
+.input_error {background-color:rgba(var(--errors_color),0.15)!important;}
+.select_error {background-color:rgba(var(--errors_color),0.15)!important;}
+.validated_input_text {background-image:url('https://www.envoyhub.com/images/checkmark.svg')!important; background-repeat: no-repeat; background-position:right 5px center; background-size:26px 26px;}
 
         /* desktop */
         @media screen and (min-width: 800px) {
@@ -79,29 +100,6 @@
 <!-- CSS -->
 <!--###############################################################-->
 <style>
-
-/**************************
-Text inputs and textarea - basic outline
-**************************/
-:root {
-    --errors_color:240,0,0;
-    --fields_border_color:#757575;
-    --fields_border:1px solid var(--fields_border_color);
-    --fields_border_radius:6px;
-}
-
-/**********************
-Errors - Server validation
-***********************/
-ul.form_error { padding:0; margin:0; list-style:none; display:inline; }
-li.form_error { padding:2px 5px; margin:2px 5px; font:normal 11px/13px sans-serif; color:white; display:inline; background:rgba(var(--errors_color),1); border-radius:3px; white-space:nowrap;}
-
-.on_error_background_tint {background-color:rgba(var(--errors_color),0.15)!important;}
-.on_error_label_style {font-weight:bold;}
-.input_error {background-color:rgba(var(--errors_color),0.15)!important;}
-.select_error {background-color:rgba(var(--errors_color),0.15)!important;}
-.validated_input_text {background-image:url('https://www.envoyhub.com/images/checkmark.svg')!important; background-repeat: no-repeat; background-position:right 5px center; background-size:26px 26px;}
-
 /* https://www.filamentgroup.com/lab/select-css.html */
 .select_normalized {
 	display: block;
