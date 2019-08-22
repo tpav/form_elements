@@ -1,6 +1,47 @@
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
+    <link rel="canonical" href="##canonical##" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>##title##</title>
+    <meta name="keywords" content="##meta_keywords##" />
+    <meta name="description" content="##meta_description##" />
+    <link href="https://fonts.googleapis.com/css?family=Assistant:400,600,700,800" rel="stylesheet">
+    <style>
+        /* mobile first */
+        html,body {background:#fff!important; margin:10px!important; padding:0; hyphens:auto; -ms-hyphens:auto; -webkit-hyphens:auto; line-height:1.3;}
+        html {
+          box-sizing: border-box;
+        }
+        *, *:before, *:after {
+          box-sizing: inherit;
+        }
+        html,body,input,textarea,select,button {font-family: 'Assistant', sans-serif; -webkit-text-size-adjust: 100%; }
+        footer {text-align:center; font-size:14px;}
+        h1 {border-top:2px solid gray; padding-top:25px; margin-top:25px; line-height:1.1;}
+        h3 {margin-bottom:0; padding-bottom:10px; line-height:1.1;}
+        .user-is-tabbing .show-on-tab {display:block!important;}
+        .sample {padding:25px 0;}
+        .swatch {height:20px; width:245px; border-radius:6px; font-size:12px; text-align:center; cursor:pointer; margin:10px 0; color:#fff;}
+        code[class*=language-], pre[class*=language-] {font-size:13px; line-height:1.2;}
+
+        /* desktop */
+        @media screen and (min-width: 800px) {
+        .innerContent {padding:20px 0;}
+        html,body {margin:20px!important;}
+        }
+
+        /* smallish Androids 360 and down */
+        @media screen and (max-width: 360px) {
+
+        }
+
+        /* minimal rules for tablets */
+        @media screen and (min-width: 768px) and (max-width: 799px) {
+
+        }
+    </style>
 </head>
 <body>
 <div class="inline_fields_group"><!-- wrap in inline_fields_group for inline fields --> 
@@ -54,5 +95,241 @@
         <option value="100000">$100,000 & Above</option>
     </select>
 </div>
+
+
+<style>
+     
+    :root {
+    /* define color agnostic of rgb or rgba so they work with either*/
+    /* bright orange */ --button-color-base: 255,165,0;
+    /* WCAG AA compliant orange --button-color-base: 211,127,0; */
+    /* WCAG AA compliant blue --button-color-base: 34,93,156; */
+    /* WCAG AA compliant green --button-color-base: 35,164,57; */
+    /* WCAG AA compliant red --button-color-base: 240,0,0; */
+    }
+
+    input[type=submit], .button {
+      -webkit-appearance: none;
+      appearance: none;
+      display:inline-block;
+      font-family:'Assistant',sans-serif;
+      text-decoration:none;
+      border:0;
+      padding: 17px 25px;
+      margin:10px;
+      text-align: center;
+      border-radius: 8px;
+      background-color: rgb(var(--button-color-base));
+      color: #fff;
+      letter-spacing: 0px;
+      text-shadow: none;
+      font-size: 22px;
+      line-height:1;
+      font-weight: bold;
+      cursor: pointer;
+      opacity:1;
+      min-width:245px;
+      box-shadow: 0px 4px 15px 0px rgba(var(--button-color-base),0.4);
+      transition-property: min-width, transform, border-radius;
+      transition-duration: 0.0s;
+      transition-timing-function: linear;
+      transform-origin:center center;
+      position:relative;
+      overflow:hidden;
+}
+
+.button_active_fancy {pointer-events:none; transition-duration: 0.3s; padding:13px; min-width:0px; border-radius:100px; font-size:0;}
+.button_active_fancy img {display:none;}
+.button.button_active_fancy .loader {display:block;}
+.button_darken {filter:brightness(75%); pointer-events:none;}
+.button.disabled, input[type=submit].disabled {opacity:0.5!important; filter:blur(0.65px); box-shadow:none!important; pointer-events:none!important; animation:none!important;}
+
+/* click/touch effect */
+.ripple {
+  transform: translate3d(0, 0, 0);
+}
+.ripple:after {
+  content:'';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-image: radial-gradient(circle, #fff 10%, transparent 10.01%);
+  background-repeat: no-repeat;
+  background-position: 50%;
+  transform: scale(10, 10);
+  opacity: 0;
+  transition: transform .5s, opacity 1s;
+}
+.ripple:active:after {
+  transform: scale(0, 0);
+  opacity: .3;
+  transition: 0s;
+}
+
+/* spinner on button click */
+.button .loader,
+.button .loader:after {
+  border-radius: 50%;
+  width: 3em;
+  height: 3em;
+}
+.button .loader {
+  display:none;
+  font-size:10px;
+  margin: 0 auto;
+  position: relative;
+  border-top: 0.4em solid rgba(255, 255, 255, 0.4);
+  border-right: 0.4em solid rgba(255, 255, 255, 0.4);
+  border-bottom: 0.4em solid rgba(255, 255, 255, 0.4);
+  border-left: 0.4em solid #ffffff;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation: load8 0.7s infinite linear;
+  animation: load8 0.7s infinite linear;
+}
+@-webkit-keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.pulse {box-shadow:0px 4px 15px 0px rgba(var(--button-color-base),0.4), 0px 0px 0px 0px rgba(var(--button-color-base),0.0); -webkit-animation: pulseButton 3s infinite;}
+        
+@-webkit-keyframes pulseButton {
+ 0% {
+    transform: scale(1);
+    box-shadow:0px 4px 15px 0px rgba(var(--button-color-base),0.4), 0px 0px 0px 0px rgba(var(--button-color-base),0.5);
+  }
+  30% {
+    transform: scale(1);
+    box-shadow:0px 4px 15px 0px rgba(var(--button-color-base),0.4), 0px 0px 10px 20px rgba(var(--button-color-base),0.0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow:0px 4px 15px 0px rgba(var(--button-color-base),0.4), 0px 0px 0px 0px rgba(var(--button-color-base),0.0);
+  }
+}
+
+/* fallback for < IE11. Can't do css vars */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {  
+  input[type=submit], .button {
+       background-color: rgb(211,127,0);
+  }
+}
+
+
+/**************************
+Text inputs and textarea - basic outline
+**************************/
+:root {
+    --errors_color:240,0,0;
+    --fields_border_color:#757575;
+    --fields_border:1px solid var(--fields_border_color);
+    --fields_border_radius:6px;
+}
+.inline_fields_group {display:flex; align-items:flex-end; justify-content:space-between;}
+.inline_fields_group .question_wrap  {flex:0 1 auto; padding-right:1vh!important;}
+.inline_fields_group .question_wrap:last-of-type {padding-right:0!important;}
+.question_wrap {margin-bottom:1.4vh; width:100%;}
+.text_field_label { margin:8px 0 2px 0; font-size:15px;}
+input[type=text],input[type=email],input[type=tel],textarea {-webkit-appearance: none; padding:1.1vh; width:100%; margin:4px 0; font-size:16px; border:var(--fields_border); background-color:#fff; background-image:none; border-radius:var(--fields_border_radius);}
+#zip {max-width:150px;}
+.question_wrap.text_input label,.question_wrap.select_input label {display:block; margin-top:0; padding-top:0; padding-left:3px; line-height:1.1;}
+textarea {font-size:16px;}
+/**********************
+Errors - Server validation
+***********************/
+ul.form_error { padding:0; margin:0; list-style:none; display:inline; }
+li.form_error { padding:2px 5px; margin:2px 5px; font:normal 11px/13px sans-serif; color:white; display:inline; background:rgba(var(--errors_color),1); border-radius:3px; white-space:nowrap;}
+
+.on_error_background_tint {background-color:rgba(var(--errors_color),0.15)!important;}
+.on_error_label_style {font-weight:bold;}
+.input_error {background-color:rgba(var(--errors_color),0.15)!important;}
+.select_error {background-color:rgba(var(--errors_color),0.15)!important;}
+.validated_input_text {background-image:url('https://www.envoyhub.com/images/checkmark.svg')!important; background-repeat: no-repeat; background-position:right 5px center; background-size:26px 26px;}
+
+/**********************
+Input Placeholder text
+***********************/
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+color:#999;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+color:#999;
+opacity:1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+color:#999;
+opacity:1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+color:#999;
+}
+::-ms-input-placeholder { /* Microsoft Edge */
+color:#999;
+}
+
+
+/* https://www.filamentgroup.com/lab/select-css.html */
+.select_normalized {
+	display: block;
+	font-size:16px;
+	font-family: sans-serif;
+	font-weight: normal;
+	color: #000;
+	line-height: 1.3;
+	padding: 1.1vh;
+	width: 100%;
+	max-width: 100%;
+	box-sizing: border-box;
+	margin:4px 0;
+	border: var(--fields_border);
+	border-radius: var(--fields_border_radius);
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	appearance: none;
+	background-color: #fff;
+	background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23000000%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E');
+	background-repeat: no-repeat, repeat;
+	background-position: right .7em top 50%, 0 0;
+	background-size: .65em auto, 100%;
+}
+.select_normalized::-ms-expand {
+	display: none;
+}
+.select_normalized option {
+	font-weight:normal;
+}
+    
+/* fallback for < IE11. Can't do css vars */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {  
+    li.form_error {
+       background:rgba(240,0,0,1);
+    }
+    .on_error_background_tint, .input_error {background-color:rgba(240,0,0,0.15)!important;}
+    .select_normalized {border: 1px solid #757575; border-radius: 6px;}
+    input[type=text],input[type=email],input[type=tel],textarea {border: 1px solid #757575; border-radius: 6px;}
+}
+
+</style>
 </body>
 </html>
