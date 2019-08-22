@@ -332,15 +332,11 @@ input[type="range"]:focus +  .rangeslider .rangeslider__handle {
 <!-- jQuery -->
 <!--###############################################################-->
 <script>
-// OPTIONAL style label and field if server validation error is present
 $(function(){
 	// requires https://www.envoyhub.com/js/form_helpers.js
 	if (typeof remote_output_slider == 'function') { 
 		remote_output_slider('debt_amount');
 	}
-	$('.form_error').parent().addClass('on_error_label_style');
-	$('.form_error').parent().next('input, select, textarea').addClass('on_error_background_tint');
-	$('.form_error').closest('fieldset').addClass('on_error_background_tint');
 })
 </script>
 </body>
