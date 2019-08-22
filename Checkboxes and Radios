@@ -96,21 +96,150 @@
 	<script type="text/javascript" src="https://www.envoyhub.com/js/form_helpers.js"></script>
 </head>
 <body>
-
+<fieldset>
+    <legend class="large_question">What types of debt do you have? <span class="question_prompt">(select all that apply)</span> <?=$errors_sample?></legend>
+    <div id="step-##data:step_id##_##tag##" class="question_wrap">
+        <div class="checkradio_input">
+            <input type="checkbox" class="checkradio" id="##tag##_101" name="##tag##[]" value="Credit Card Debt" />
+            <label id="label_for_##tag##_10" for="##tag##_101" class="checkradio_label">Credit Card Debt</label>
+        </div>
+        <div class="checkradio_input">
+            <input type="checkbox" class="checkradio" id="##tag##_111" name="##tag##[]" value="Student Loan Debt" />
+            <label id="label_for_##tag##_10" for="##tag##_111" class="checkradio_label">Student Loan Debt</label>
+        </div>
+        <div class="checkradio_input">
+            <input type="checkbox" class="checkradio" id="##tag##_121" name="##tag##[]" value="Tax Debt" />
+            <label id="label_for_##tag##_10" for="##tag##_121" class="checkradio_label">Tax Debt</label>
+        </div>
+        <div class="checkradio_input">
+            <input type="checkbox" class="checkradio" id="##tag##_131" name="##tag##[]" value="Other Debt" />
+            <label id="label_for_##tag##_10" for="##tag##_131" class="checkradio_label">Other Debt</label>
+        </div>
+    </div>
+</fieldset>
+<fieldset>
+    <legend>Are you behind on your payments?</legend>
+    <div id="step-##data:step_id##_##tag##" class="question_wrap">
+        <div class="checkradio_input">
+            <input type="radio" class="checkradio" id="##tag##_141" name="##tag##" value="1" />
+            <label id="label_for_##tag##_10" for="##tag##_141" class="checkradio_label">Yes</label>
+        </div>
+        <div class="checkradio_input">
+            <input type="radio" class="checkradio" id="##tag##_151" name="##tag##" value="0" />
+            <label id="label_for_##tag##_10" for="##tag##_151" class="checkradio_label">No</label>
+        </div>
+        <div class="checkradio_input">
+            <input type="radio" class="checkradio" id="##tag##_161" name="##tag##" value="3" />
+            <label id="label_for_##tag##_10" for="##tag##_161" class="checkradio_label">Not Sure</label>
+        </div>
+    </div>
+</fieldset>
 
 
 <!--###############################################################-->
 <!-- CSS UNique to elements -->
 <!--###############################################################-->
 <style>
-
+// php sets SVG check icon color
+&lt;?php $checked_color = 'rgba(8,79,140,1)';?&gt;
+:root {
+    --checked_color:8,79,140;
+    --checkradio_size:32px;
+    --checkradio_label_size:calc(var(--checkradio_size) * 0.6);
+    --checkradio_space_between:calc(var(--checkradio_size) * 0.4);
+}
+.checkradio_input:first-of-type {margin-top:0;}
+.checkradio_input {margin:20px 0;} /* IE fallback */
+.checkradio_input {margin:var(--checkradio_space_between) 0;}
+.checkradio_input:last-of-type {margin-bottom:0;}
+legend {
+    display: table;
+    font-size:16px;
+    font-weight:bold;
+    float: left;
+    margin: 0;
+    padding: 0 0 15px 0;
+    width: 100%;
+}
+fieldset {
+  border: 0;
+  border-radius:6px;
+  padding: 15px 10px 10px 15px;
+  margin: 0 0 0 -15px;
+  min-width: 0;
+}
+body:not(:-moz-handler-blocked) fieldset {
+  display: table-cell;
+}
+/* Edge and IE will use system styles */
+@supports(-webkit-appearance: none) {
+ 	.checkradio {
+		-webkit-appearance: none;
+		width: var(--checkradio_size);
+		height: var(--checkradio_size);
+		border: 2px solid var(--fields_border_color);
+		position: relative;
+		background: none;
+		outline:none;
+		vertical-align:middle;
+	}
+	.checkradio + label {vertical-align:middle; padding-left:3px; font-size:var(--checkradio_label_size);}
+	.checkradio:checked {
+		background:rgba(var(--checked_color),1);
+		border-color:rgba(var(--checked_color),1);
+	}
+	input[type="checkbox"].checkradio,input[type="checkbox"].checkradio:not(:checked)::after, input[type="checkbox"].checkradio:checked::after {
+		border-radius: 4px;
+		transition:all .3s;
+	}
+	input[type="radio"].checkradio,input[type="radio"].checkradio:not(:checked)::after, input[type="radio"].checkradio:checked::after {
+		border-radius: 50%;
+		transition:all .3s;
+	}
+	.checkradio:not(:checked)::after,.checkradio:checked::after {
+		position: absolute;
+		transform-origin:center center;
+		top: 0; 
+		right:0;
+		bottom:0;
+		left: 0;
+		content: "";
+		background-image: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20512%20512%22%3E%3Ccircle%20cx%3D%22256.9%22%20cy%3D%22256.2%22%20r%3D%22246.7%22%20fill%3D%22%23fff%22%2F%3E%3Cpath%20d%3D%22M257%209.5C120.7%209.5%2010.2%20120%2010.2%20256.2S120.7%20503%20257%20503s246.7-110.5%20246.7-246.8S393.2%209.5%20257%209.5zm168.5%20175.7L284.8%20337.9l-44.3%2048c-4.2%204.5-11.2%204.5-15.5%200L180.3%20338l-73.8-79c-4.4-4.5-4.4-12.1-.2-16.7l36.5-39.7c4.2-4.5%2011.2-4.5%2015.5%200l66.2%2070.6c4.2%204.7%2011.2%204.5%2015.5%200l133-144.3c4.2-4.5%2011.1-4.5%2015.3%200l37%2039.6c4.4%204.5%204.4%2012.1.2%2016.7z%22%20fill%3D%22&lt;?= urlencode($checked_color)?&gt;%22%2F%3E%3C%2Fsvg%3E');
+		background-repeat:no-repeat;
+		background-size:calc(var(--checkradio_size) * 1.05);
+		background-position:65% 45%;
+	}
+	.checkradio:not(:checked)::after {
+		opacity:0;
+		transform:scale(0);
+	}
+	.checkradio:checked::after {
+		opacity:1;
+		transform:scale(1);
+		-webkit-animation:onClickCheckRadio 0.3s forwards;
+	}
+	@-webkit-keyframes onClickCheckRadio {
+		0% {
+			box-shadow:0 0 0px 0px rgba(var(--checked_color),0);
+		}
+		30% {
+			box-shadow:0 0 0px 30px rgba(var(--checked_color),.5);
+		}
+		100% {
+			box-shadow:0 0 0px 20px rgba(var(--checked_color),0);
+		}
+	}
+}
 </style>
 
 <!--###############################################################-->
 <!-- jQuery -->
 <!--###############################################################-->
 <script>
-
-   </script>
+$(function(){
+    $('.form_error').parent().addClass('on_error_label_style');
+    $('.form_error').closest('fieldset').addClass('on_error_background_tint');
+})
+</script>
 </body>
 </html>
