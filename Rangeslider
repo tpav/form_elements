@@ -240,5 +240,15 @@ $(function(){
 	if (typeof remote_output_slider == 'function') { 
 		remote_output_slider('debt_amount');
 	}
+	// populate slider value from session storage, sniffs .form_error class in DOM
+	    if ( $('.form_error').length ) {// there is a server validation error
+		if (sessionStorage.local_debt_amount == undefined) { // if debt amount has NOT been changed default to 20000
+		    $('input[type="range"]').val(20000).change();
+		    $('input[type="range"]').closest('.slider_elements').find('.true_amount').val(20000);
+		} else { // if debt amount has been changed, use the amount they set
+		    $('input[type="range"]').val(sessionStorage.local_debt_amount).change();
+		    $('input[type="range"]').closest('.slider_elements').find('.true_amount').val(sessionStorage.local_debt_amount);
+		}
+	    }
 })
 </script>
