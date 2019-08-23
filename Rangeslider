@@ -1,4 +1,4 @@
-<div style="text-align:center;">
+<div id="step-##data:step_id##_##tag##" style="text-align:center;">
     <label for="debt_amount" class="large_question">
            About how much unsecured debt* do you have? <span class="question_prompt">(OK to estimate)</span>&nbsp;##errors##
     </label>
