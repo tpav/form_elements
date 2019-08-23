@@ -44,7 +44,7 @@
 .text_field_label { margin:8px 0 2px 0; font-size:15px;}
 input[type=text],input[type=email],input[type=tel],textarea {-webkit-appearance: none; padding:1.1vh; width:100%; margin:4px 0; font-size:16px; border:var(--fields_border); background-color:#fff; background-image:none; border-radius:var(--fields_border_radius);}
 #zip {max-width:150px;}
-.question_wrap.text_input label,.question_wrap.select_input label {display:block; margin-top:0; padding-top:0; padding-left:3px; line-height:1.1;}
+.question_wrap.text_input label {display:block; margin-top:0; padding-top:0; padding-left:3px; line-height:1.1;}
 textarea {font-size:16px;}
 </style>
 
