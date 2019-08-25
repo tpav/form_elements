@@ -1,11 +1,13 @@
 <h3>Button element (Preferred)</h3>
-    <div style="text-align:center; display:inline-block; min-width:300px;">
+    <div style="text-align:center; min-width:300px;">
+    
         <button class="button ripple pulse">Button 
             <span class="button_icon" aria-hidden="true">
                 <img src="https://www.envoyhub.com/images/downward_dollar_icon_rev.svg" style="width:auto; height:17px; vertical-align:middle;" />
             </span>
             <div class="loader" role="alert"></div>
         </button>
+        
     </div>
     <p>Pros: Accepts click, space or enter/return and tab events, Will submit form if in form element, Allows nested elements<br />Cons: No native event outside forms<br />Remove "disabled" class with js if you want to keep disabled state until user initiates interaction or after client side validation.<br />Optional classes "ripple", "pulse" and "disabled". Optional icon.</p>
  <h3>Anchor tag</h3>
