@@ -49,7 +49,7 @@
 }
 </style>
 <script>
-// OPTIONAL style label and field if server validation error is present
+// OPTIONAL style label and field if server validation error is present, once per page
 $(function(){
 	$('.form_error').parent().addClass('on_error_label_style');
 	$('.form_error').parent().next('input, select, textarea').addClass('on_error_background_tint');
