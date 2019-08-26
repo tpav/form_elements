@@ -48,11 +48,21 @@ input[type=text],input[type=email],input[type=tel],textarea {-webkit-appearance:
 textarea {font-size:16px;}
 </style>
 
-<script>
-// OPTIONAL style label and field if server validation error is present, once per page
-$(function(){
-	$('.form_error').parent().addClass('on_error_label_style');
-	$('.form_error').parent().next('input, select, textarea').addClass('on_error_background_tint');
-	$('.form_error').closest('fieldset').addClass('on_error_background_tint');
-})
+script>
+// OPTIONAL: style label, field or fieldset elements if server validation error is present, include once per page.
+var form_errors = document.querySelectorAll('ul.form_error'), tintable_fields, tintable_fieldset;
+form_errors.forEach(function(e){
+    // starting at error traverse to parent 'label'
+    e.parentNode.classList.add('on_error_label_style');
+    // starting at error traverse to adjacent 'field'
+    tintable_fields = e.parentNode.parentNode.querySelectorAll('input[type=text], input[type=email], input[type=tel], select, textarea');
+    tintable_fields.forEach(function(f){
+        f.classList.add('on_error_background_tint');
+    });
+    // starting at error select parent of parent only apply if 'fieldset'
+    tintable_fieldset = e.parentNode.parentNode;
+    if (tintable_fieldset.nodeName == 'FIELDSET') {
+        tintable_fieldset.classList.add('on_error_background_tint');
+    }
+});
 </script>
