@@ -34,21 +34,18 @@
     <textarea id="notes" name="notes" placeholder="Comments? (optional)" style="height:100px;" /></textarea>
 </div>
 
-<!--###############################################################-->
-<!-- CSS UNique to fields -->
-<!--###############################################################-->
 <style>
-.inline_fields_group {display:flex; align-items:flex-end; justify-content:space-between;}
-.inline_fields_group .question_wrap  {flex:0 1 auto; padding-right:1vh!important;}
-.inline_fields_group .question_wrap:last-of-type {padding-right:0!important;}
-.text_field_label { margin:8px 0 2px 0; font-size:15px;}
-input[type=text],input[type=email],input[type=tel],textarea {-webkit-appearance: none; padding:1.1vh; width:100%; margin:4px 0; font-size:16px; border:var(--fields_border); background-color:#fff; background-image:none; border-radius:var(--fields_border_radius);}
-#zip {max-width:150px;}
-.question_wrap.text_input label {display:block; margin-top:0; padding-top:0; padding-left:3px; line-height:1.1;}
-textarea {font-size:16px;}
+    .inline_fields_group {display:flex; align-items:flex-end; justify-content:space-between;}
+    .inline_fields_group .question_wrap  {flex:0 1 auto; padding-right:1vh!important;}
+    .inline_fields_group .question_wrap:last-of-type {padding-right:0!important;}
+    .text_field_label { margin:8px 0 2px 0; font-size:15px;}
+    input[type=text],input[type=email],input[type=tel],textarea {-webkit-appearance: none; padding:1.1vh; width:100%; margin:4px 0; font-size:16px; border:var(--fields_border); background-color:#fff; background-image:none; border-radius:var(--fields_border_radius);}
+    #zip {max-width:150px;}
+    .question_wrap.text_input label {display:block; margin-top:0; padding-top:0; padding-left:3px; line-height:1.1;}
+    textarea {font-size:16px;}
 </style>
 
-script>
+<script>
 // OPTIONAL: style label, field or fieldset elements if server validation error is present, include once per page.
 var form_errors = document.querySelectorAll('ul.form_error'), tintable_fields, tintable_fieldset;
 form_errors.forEach(function(e){
