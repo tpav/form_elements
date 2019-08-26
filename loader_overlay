@@ -1,0 +1,12 @@
+<div id="loader" class="loader hide_if_validation_error">
+  <div class="loader_spinner"></div>
+</div>
+
+<style>
+  .loader {position:absolute; top:0; right:0; bottom:0; left:0; background:#fff; z-index:99; padding-top:275px;}
+</style>
+
+Requires https://www.envoyhub.com/js/form_helpers.js for delay (in ms), otherwise hides immediately.
+<script>
+    var loader_delay = '200';
+</script>
