@@ -1,32 +1,11 @@
-<h3>Button element (Preferred)</h3>
-    <div style="text-align:center; min-width:300px;">
-    
-        <button class="button ripple pulse">Button 
-            <span class="button_icon" aria-hidden="true">
-                <img src="https://www.envoyhub.com/images/downward_dollar_icon_rev.svg" style="width:auto; height:17px; vertical-align:middle;" />
-            </span>
-            <div class="loader" role="alert"></div>
-        </button>
-        
-    </div>
-    <p>Pros: Accepts click, space or enter/return and tab events, Will submit form if in form element, Allows nested elements<br />Cons: No native event outside forms<br />Remove "disabled" class with js if you want to keep disabled state until user initiates interaction or after client side validation.<br />Optional classes "ripple", "pulse" and "disabled". Optional icon.</p>
- <h3>Anchor tag</h3>
-    <a class="button ripple" href="#0" tabindex="0" role="button">Anchor <span class="button_icon" aria-hidden="true"><img src="https://www.envoyhub.com/images/downward_dollar_icon_rev.svg" style="width:auto; height:17px; vertical-align:middle;" /></span><div class="loader" role="alert"></div></a>
-    <p>Pros: Accepts click, enter/return, Allows nested elements<br />Cons: accessibility issues, Tab event requires tabindex="0", Have to prevent default event</p>
-    
-<h3>Input type submit</h3>
-    <input class="pulse" type="submit" name="tsubmit" id="submit-save_button" value="Submit input &rarr;">
-    <p>Pros: Accepts click, space, enter/return and tab events, Will submit form if in form element<br />Cons: difficult to combine with icons, Can't use CSS :after</p>
-
-<h3>div element</h3>
-    <div class="button ripple" tabindex="0" role="button">Div<div class="loader" role="alert"></div></div>
-    <p>Pros: Allows nested elements<br />Cons: accessibility issues, No enter/return, tab event requires tabindex="0", Accepts click only</p>
-
-
-<!--###############################################################-->
-<!-- CSS UNique to buttons -->
-<!--###############################################################-->
+<button class="button ripple pulse">Button 
+    <span class="button_icon" aria-hidden="true">
+        <img src="https://www.envoyhub.com/images/downward_dollar_icon_rev.svg" style="width:auto; height:17px; vertical-align:middle;" />
+    </span>
+    <div class="loader" role="alert"></div>
+</button>
 <style>
+#form_submit_button, #form_submit_processing {display:none;}
     input[type=submit], .button {
       -webkit-appearance: none;
       appearance: none;
@@ -156,31 +135,30 @@
 }
 </style>
 
-<!--###############################################################-->
-<!-- jQuery unique to buttons. Edit for production to trigger submit event... -->
-<!--###############################################################-->
 <script>
 // buttons, anchors, and divs click event. 
-     $('.button').on('click', function(){
-        var button = $(this);
-        setTimeout(function(){
-            button.prop('disabled',true).addClass('button_active_fancy');
-        }, 500);
-        // for demo only
-        setTimeout(function(){
-            button.prop('disabled',false).removeClass('button_active_fancy');
-        }, 5000);
-    })
-    // input can't have :after or nested elements so handle differently
-    $('input[type=submit]').on('click', function(){
-        var button = $(this);
-        var button_label = $(this).val();
-        button.prop('disabled',true).addClass('button_darken');
-        button.val('Saving...');
-        // for demo only
-        setTimeout(function(){
-            button.prop('disabled',false).removeClass('button_darken');
-            button.val(button_label);
-        }, 5000);
-    })
-   </script>
+// edit for production to trigger submit event
+// css hides default input type submit  
+ $('.button').on('click', function(){
+    var button = $(this);
+    setTimeout(function(){
+        button.prop('disabled',true).addClass('button_active_fancy');
+    }, 500);
+    // for demo only
+    setTimeout(function(){
+        button.prop('disabled',false).removeClass('button_active_fancy');
+    }, 5000);
+})
+// input can't have :after or nested elements so handle differently
+$('input[type=submit]').on('click', function(){
+    var button = $(this);
+    var button_label = $(this).val();
+    button.prop('disabled',true).addClass('button_darken');
+    button.val('Saving...');
+    // for demo only
+    setTimeout(function(){
+        button.prop('disabled',false).removeClass('button_darken');
+        button.val(button_label);
+    }, 5000);
+})
+</script>
