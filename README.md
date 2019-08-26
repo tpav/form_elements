@@ -10,6 +10,6 @@
 
 [Slider](https://www.envoyhub.com/style-guide-slider.html) - form_helpers.js
 
-[Lander Overlay](https://www.envoyhub.com/style-guide-loader.html) - form_helpers.js
+[Loader Overlay](https://www.envoyhub.com/style-guide-loader.html) - form_helpers.js
 
 Template is common to all forms, include styles and js contained in HEAD.
