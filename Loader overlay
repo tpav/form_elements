@@ -3,11 +3,28 @@
 </div>
 
 <style>
-  .loader {position:absolute; top:0; right:0; bottom:0; left:0; background:#fff; z-index:999; display:flex; align-items:center; justify-content:center;}
-  .loader_spinner {
-  margin:0 auto; width:40px; height:40px; border-radius:50%; border-left:5px solid rgba(var(--key_color),1.0); border-top:5px solid <?=$border_color?>; border-right:5px solid <?=$border_color?>; border-bottom:5px solid <?=$border_color?>; animation: loader_spinner 1s linear infinite;
+.loader {position:absolute;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+  background:#fff;
+  z-index:999;
+  display:flex;
+  align-items:center;
+  justify-content:center;
 }
-
+.loader_spinner {
+  margin:0 auto;
+  width:40px;
+  height:40px;
+  border-radius:50%;
+  border-left:5px solid rgba(var(--key_color),1.0);
+  border-top:5px solid <?=$border_color?>;
+  border-right:5px solid <?=$border_color?>;
+  border-bottom:5px solid <?=$border_color?>;
+  animation: loader_spinner 1s linear infinite;
+}
 @keyframes loader_spinner {
   0% { transform:rotate(0deg) }
   100% { transform:rotate(360deg) }
