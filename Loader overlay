@@ -31,8 +31,6 @@
 }
 </style>
 
-Requires https://www.envoyhub.com/js/form_helpers.js for delay (in ms), otherwise hides immediately.
-form_helpers.js will hide if form_error is present
 <script>
     var loader_delay = '200';
 </script>
