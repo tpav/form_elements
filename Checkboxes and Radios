@@ -1,6 +1,6 @@
 Sort out unique IDs, ##errors##, etc after pasting...
 <fieldset id="step-##data:step_id##_##tag##">
-    <legend class="large_question">What types of debt do you have? <span class="question_prompt">(select all that apply)</span> <?=$errors_sample?></legend>
+    <legend class="large_question">What types of debt do you have? <span class="question_prompt">(select all that apply)</span> ##errors##</legend>
     <div id="step-##data:step_id##_##tag##" class="question_wrap">
         <div class="checkradio_input">
             <input type="checkbox" class="checkradio" id="##tag##_101" name="##tag##[]" value="Credit Card Debt" />
@@ -21,7 +21,7 @@ Sort out unique IDs, ##errors##, etc after pasting...
     </div>
 </fieldset>
 <fieldset id="step-##data:step_id##_##tag##">
-    <legend>Are you behind on your payments?</legend>
+    <legend>Are you behind on your payments? ##errors##</legend>
     <div id="step-##data:step_id##_##tag##" class="question_wrap">
         <div class="checkradio_input">
             <input type="radio" class="checkradio" id="##tag##_141" name="##tag##" value="1" />
@@ -133,21 +133,7 @@ body:not(:-moz-handler-blocked) fieldset {
 	}
 }
 </style>
+
 <script>
-// OPTIONAL: style label, field or fieldset elements if server validation error is present, include once per page.
-var form_errors = document.querySelectorAll('ul.form_error'), tintable_fields, tintable_fieldset;
-form_errors.forEach(function(e){
-    // starting at error traverse to parent 'label'
-    e.parentNode.classList.add('on_error_label_style');
-    // starting at error traverse to adjacent 'field'
-    tintable_fields = e.parentNode.parentNode.querySelectorAll('input[type=text], input[type=email], input[type=tel], select, textarea');
-    tintable_fields.forEach(function(f){
-        f.classList.add('on_error_background_tint');
-    });
-    // starting at error select parent of parent only apply if 'fieldset'
-    tintable_fieldset = e.parentNode.parentNode;
-    if (tintable_fieldset.nodeName == 'FIELDSET') {
-        tintable_fieldset.classList.add('on_error_background_tint');
-    }
-});
+// no js required
 </script>
