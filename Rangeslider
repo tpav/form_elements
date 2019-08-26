@@ -14,10 +14,6 @@
     </div>
 </div>
 
-
-<!--###############################################################-->
-<!-- CSS UNique to slider -->
-<!--###############################################################-->
 <style>
 :root {
   --rangeslider_key_color:rgb(var(--key_color)); /* slider */
@@ -231,9 +227,6 @@ input[type="range"]:focus +  .rangeslider .rangeslider__handle {
 .slider_range_prompt.right:after {content:'More';}
 </style>
 
-<!--###############################################################-->
-<!-- jQuery unique to slider -->
-<!--###############################################################-->
 <script>
 $(function(){
 	// requires https://www.envoyhub.com/js/form_helpers.js
