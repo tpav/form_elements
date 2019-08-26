@@ -38,6 +38,7 @@
 	    /* WCAG AA compliant green --button-color-base: 35,164,57; */
 	    /* WCAG AA compliant red --button-color-base: 240,0,0; */
 	}
+	.tcpa_disclosure {font-size:10px; line-height:1.3; color:#757575; margin-top:20px;}
 	.large_question {font-weight:bold; font-size:22px; line-height:1.0; color:rgb(var(--key_color)); padding-bottom:15px;}
 	.question_prompt {font-weight:normal; font-size:14px; color:#000;}
 	.question_wrap {margin-bottom:1.4vh; width:100%;}
