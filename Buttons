@@ -1,6 +1,6 @@
 <button class="button ripple pulse">Button 
     <span class="button_icon" aria-hidden="true">
-        <img src="https://www.envoyhub.com/images/downward_dollar_icon_rev.svg" style="width:auto; height:17px; vertical-align:middle;" />
+        <img src="https://www.envoyhub.com/images/downward_dollar_icon_rev.svg" style="width:auto; height:17px; vertical-align:middle;" alt="icon" />
     </span>
     <div class="loader" role="alert"></div>
 </button>
