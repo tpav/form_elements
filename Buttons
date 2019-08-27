@@ -39,10 +39,12 @@ input[type=submit], .button {
 }
 .button_active_fancy {
     pointer-events:none;
+    transition-delay: 0.5s;
     transition-duration: 0.3s;
     padding:13px;
     min-width:0px;
-    border-radius:100px; font-size:0;
+    border-radius:100px;
+    font-size:0;
 }
 .button_active_fancy img {
     display:none;
@@ -159,6 +161,17 @@ input[type=submit], .button {
 </style>
 
 <script>
+// basic button click submit form. Button can be outside form.
+var button = document.querySelector('button');
+var form = document.querySelector('form');
+button.addEventListener('click', function(e){
+    setTimeout(function(){
+        form.submit();
+    }, 1000); // inject slight delay so animation is seen
+    button.classList.add('button_active_fancy');
+    button.setAttribute('disabled', true);
+});
+
 // buttons, anchors, and divs click event. 
 // edit for production to trigger submit event
   
