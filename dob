@@ -17,7 +17,7 @@
   <input type="hidden" name="date_of_birth" id="date_of_birth" value="" />
 </fieldset>
 
-Shares field element, and checkbox and radio 'fieldset' and 'legend' CSS
+Shares CSS from field element, checkbox and radio 'fieldset' and 'legend'
 
 <script src="https://www.envoyhub.com/js/moment.js"></script>
 
