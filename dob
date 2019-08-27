@@ -1,6 +1,6 @@
 <fieldset>
     <legend class="large_question">Your Date of Birth:</legend>
-    <div style="display:flex; justify-content:center; max-width:190px; margin-top:-20px; clear:both;">
+    <div style="display:flex; justify-content:center; max-width:190px; clear:both;">
         <div style="margin-left:-7px; margin-right:10px; text-align:center;">  
             <input type="tel" id="mm" name="month" autocomplete="bday-month" style="width:45px; text-align:center;" pattern=".{2,2}" maxlength="2" placeholder="01" required onkeyup="autoTab(this,'dd');" />
             <br /><label for="mm" class="question_prompt">Month<br /><span style="font-size:11px; color:#999;">(MM)</span></label>
