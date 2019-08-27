@@ -19,19 +19,18 @@
 <script src="https://www.envoyhub.com/js/moment.js"></script>
 
 <script>
-  var YYYY = $('#yyyy').val();
-  var MM = $('#mm').val()
-  var DD = $('#dd').val()
-  var formatted_date_of_birth = YYYY + '-' + MM + '-' + DD;
-  
-  if (moment(formatted_date_of_birth, 'YYYY-MM-DD', true).isValid()) {
-   // passed client side validation...
-  }
-  
-  function autoTab(element, nextElementID) {
+var YYYY = $('#yyyy').val();
+var MM = $('#mm').val()
+var DD = $('#dd').val()
+var formatted_date_of_birth = YYYY + '-' + MM + '-' + DD;
+
+if (moment(formatted_date_of_birth, 'YYYY-MM-DD', true).isValid()) {
+    // passed client side validation...
+}
+
+function autoTab(element, nextElementID) {
     nextElement = document.getElementById(nextElementID);
-    if (typeof(nextElement) != 'undefined')
-    {
+    if (typeof(nextElement) != 'undefined') {
         if (element.value.length == element.maxLength) {
             nextElement.focus();
         }
