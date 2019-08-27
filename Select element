@@ -18,7 +18,7 @@
 .question_wrap.select_input label {display:block; margin-top:0; padding-top:0; padding-left:3px; line-height:1.1;}
 .select_normalized {
 	display: block;
-	font-size:16px;
+	font-size:18px;
 	font-weight: normal;
 	color: #000;
 	line-height: 1.3;
