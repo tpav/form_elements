@@ -1,1 +1,40 @@
-Coming soon
+<label class="dob_label" style="text-align:center;">Your Date of Birth:</label>
+<div style="display:flex; justify-content:center; max-width:160px; margin:0 auto;">
+    <div style="margin-right:10px; text-align:center;">  
+        <input type="tel" id="mm" name="month" autocomplete="bday-month" style="width:45px; text-align:center;" pattern=".{2,2}" maxlength="2" placeholder="01" required onkeyup="autoTab(this,'dd');" />
+        <div class="question_prompt">Month<br /><span style="font-size:11px; color:#999;">(MM)</span></div>
+    </div>
+    <div style="margin-right:10px; text-align:center;">  
+        <input type="tel" id="dd" name="day" autocomplete="bday-day" style="width:45px; text-align:center;" pattern=".{2,2}" maxlength="2" placeholder="01" required onkeyup="autoTab(this,'yyyy');" />
+        <div class="question_prompt">Day<br /><span style="font-size:11px; color:#999;">(DD)</span></div>
+    </div> 
+    <div style="text-align:center;">  
+        <input type="tel" id="yyyy" name="year" autocomplete="bday-year" style="width:65px; text-align:center;" pattern=".{4,4}" maxlength="4" placeholder="1976" />
+        <div class="question_prompt">Year<br /><span style="font-size:11px; color:#999;">(YYYY)</span></div>
+    </div>
+</div>
+
+
+
+<script src="https://www.envoyhub.com/js/moment.js"></script>
+
+<script>
+  var YYYY = $('#yyyy').val();
+  var MM = $('#mm').val()
+  var DD = $('#dd').val()
+  var formatted_date_of_birth = YYYY + '-' + MM + '-' + DD;
+  
+  if (moment(formatted_date_of_birth, 'YYYY-MM-DD', true).isValid()) {
+   // passed client side validation...
+  }
+  
+  function autoTab(element, nextElementID) {
+    nextElement = document.getElementById(nextElementID);
+    if (typeof(nextElement) != 'undefined')
+    {
+        if (element.value.length == element.maxLength) {
+            nextElement.focus();
+        }
+    }
+}
+</script>
