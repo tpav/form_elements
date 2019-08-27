@@ -161,40 +161,14 @@ input[type=submit], .button {
 </style>
 
 <script>
-// basic button click submit form. Button can be outside form.
+// button click to submit form. Button can be insode or outside form element.
 var button = document.querySelector('button');
 var form = document.querySelector('form');
 button.addEventListener('click', function(e){
     setTimeout(function(){
         form.submit();
-    }, 1000); // inject slight delay so animation is seen
-    button.classList.add('button_active_fancy');
+    }, 1000); // inject delay so animation is seen
     button.setAttribute('disabled', true);
-});
-
-// buttons, anchors, and divs click event. 
-// edit for production to trigger submit event
-  
- $('.button').on('click', function(){
-    var button = $(this);
-    setTimeout(function(){
-        button.prop('disabled',true).addClass('button_active_fancy');
-    }, 500);
-    // for demo only
-    setTimeout(function(){
-        button.prop('disabled',false).removeClass('button_active_fancy');
-    }, 5000);
-})
-// input can't have :after or nested elements so handle differently
-$('input[type=submit]').on('click', function(){
-    var button = $(this);
-    var button_label = $(this).val();
-    button.prop('disabled',true).addClass('button_darken');
-    button.val('Saving...');
-    // for demo only
-    setTimeout(function(){
-        button.prop('disabled',false).removeClass('button_darken');
-        button.val(button_label);
-    }, 5000);
+    button.classList.add('button_active_fancy'); // optional if you want button to visually change...
 })
 </script>
