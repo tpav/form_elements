@@ -12,4 +12,6 @@
 
 [Loader Overlay](https://www.envoyhub.com/style-guide-loader.html) - form_helpers.js
 
+[Date of Birth] (https://www.envoyhub.com/style-guide-dob.html) - JS for validation and formatting date string
+
 Template is common to all forms, include styles and js contained in HEAD.
