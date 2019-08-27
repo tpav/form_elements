@@ -5,8 +5,10 @@
     <div class="loader" role="alert"></div>
 </button>
 <style>
-#form_submit_button, #form_submit_processing {display:none;}
-    input[type=submit], .button {
+#form_submit_button, #form_submit_processing {
+    display:none;
+}
+input[type=submit], .button {
       -webkit-appearance: none;
       appearance: none;
       display:inline-block;
@@ -35,12 +37,30 @@
       position:relative;
       overflow:hidden;
 }
-
-.button_active_fancy {pointer-events:none; transition-duration: 0.3s; padding:13px; min-width:0px; border-radius:100px; font-size:0;}
-.button_active_fancy img {display:none;}
-.button.button_active_fancy .loader {display:block;}
-.button_darken {filter:brightness(75%); pointer-events:none;}
-.button.disabled, input[type=submit].disabled {opacity:0.5!important; filter:blur(0.65px); box-shadow:none!important; pointer-events:none!important; animation:none!important;}
+.button_active_fancy {
+    pointer-events:none;
+    transition-duration: 0.3s;
+    padding:13px;
+    min-width:0px;
+    border-radius:100px; font-size:0;
+}
+.button_active_fancy img {
+    display:none;
+}
+.button.button_active_fancy .loader {
+    display:block;
+}
+.button_darken {
+    filter:brightness(75%);
+    pointer-events:none;
+}
+.button.disabled, input[type=submit].disabled {
+    opacity:0.5!important;
+    filter:blur(0.65px);
+    box-shadow:none!important;
+    pointer-events:none!important;
+    animation:none!important;
+}
 
 /* click/touch effect */
 .ripple {
@@ -110,7 +130,10 @@
   }
 }
 
-.pulse {box-shadow:0px 4px 15px 0px rgba(var(--button-color-base),0.4), 0px 0px 0px 0px rgba(var(--button-color-base),0.0); -webkit-animation: pulseButton 3s infinite;}
+.pulse {
+    box-shadow:0px 4px 15px 0px rgba(var(--button-color-base),0.4), 0px 0px 0px 0px rgba(var(--button-color-base),0.0);
+    -webkit-animation: pulseButton 3s infinite;
+}
         
 @-webkit-keyframes pulseButton {
  0% {
@@ -138,7 +161,7 @@
 <script>
 // buttons, anchors, and divs click event. 
 // edit for production to trigger submit event
-// css hides default input type submit  
+  
  $('.button').on('click', function(){
     var button = $(this);
     setTimeout(function(){
