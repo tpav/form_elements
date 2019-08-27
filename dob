@@ -1,32 +1,41 @@
-<label class="dob_label" style="text-align:center;">Your Date of Birth:</label>
-<div style="display:flex; justify-content:center; max-width:160px; margin:0 auto;">
-    <div style="margin-right:10px; text-align:center;">  
-        <input type="tel" id="mm" name="month" autocomplete="bday-month" style="width:45px; text-align:center;" pattern=".{2,2}" maxlength="2" placeholder="01" required onkeyup="autoTab(this,'dd');" />
-        <div class="question_prompt">Month<br /><span style="font-size:11px; color:#999;">(MM)</span></div>
+<fieldset>
+    <legend class="large_question" style="float:none;">Your Date of Birth:</legend>
+    <div style="display:flex; justify-content:center; max-width:190px; margin-top:-20px;">
+        <div style="margin-left:-7px; margin-right:10px; text-align:center;">  
+            <input type="tel" id="mm" name="month" autocomplete="bday-month" style="width:45px; text-align:center;" pattern=".{2,2}" maxlength="2" placeholder="01" required onkeyup="autoTab(this,'dd');" />
+            <br /><label for="mm" class="question_prompt">Month<br /><span style="font-size:11px; color:#999;">(MM)</span></label>
+        </div>
+        <div style="margin-right:10px; text-align:center;">  
+            <input type="tel" id="dd" name="day" autocomplete="bday-day" style="width:45px; text-align:center;" pattern=".{2,2}" maxlength="2" placeholder="01" required onkeyup="autoTab(this,'yyyy');" />
+            <br /><label for="dd" class="question_prompt">Day<br /><span style="font-size:11px; color:#999;">(DD)</span></label>
+        </div> 
+        <div style="text-align:center;">  
+            <input type="tel" id="yyyy" name="year" autocomplete="bday-year" style="width:65px; text-align:center;" pattern=".{4,4}" maxlength="4" placeholder="1976" />
+            <br /><label for="yyyy" class="question_prompt">Year<br /><span style="font-size:11px; color:#999;">(YYYY)</span></label>
+        </div>
     </div>
-    <div style="margin-right:10px; text-align:center;">  
-        <input type="tel" id="dd" name="day" autocomplete="bday-day" style="width:45px; text-align:center;" pattern=".{2,2}" maxlength="2" placeholder="01" required onkeyup="autoTab(this,'yyyy');" />
-        <div class="question_prompt">Day<br /><span style="font-size:11px; color:#999;">(DD)</span></div>
-    </div> 
-    <div style="text-align:center;">  
-        <input type="tel" id="yyyy" name="year" autocomplete="bday-year" style="width:65px; text-align:center;" pattern=".{4,4}" maxlength="4" placeholder="1976" />
-        <div class="question_prompt">Year<br /><span style="font-size:11px; color:#999;">(YYYY)</span></div>
-    </div>
-</div>
+  <input type="hidden" name="date_of_birth" id="date_of_birth" value="" />
+</fieldset>
 
-
+Shares field element, and checkbox and radio 'fieldset' and 'legend' CSS
 
 <script src="https://www.envoyhub.com/js/moment.js"></script>
 
 <script>
-var YYYY = $('#yyyy').val();
-var MM = $('#mm').val()
-var DD = $('#dd').val()
-var formatted_date_of_birth = YYYY + '-' + MM + '-' + DD;
-
-if (moment(formatted_date_of_birth, 'YYYY-MM-DD', true).isValid()) {
-    // passed client side validation...
-}
+// edit to work on submit
+document.getElementById("validate").addEventListener("click", function(){ 
+    var YYYY = document.getElementById('yyyy').value;
+    var MM = document.getElementById('mm').value;
+    var DD = document.getElementById('dd').value;
+    var formatted_date_of_birth = YYYY + '-' + MM + '-' + DD;
+    if (moment(formatted_date_of_birth, 'YYYY-MM-DD', true).isValid()) {
+        // passed client side validation...
+        document.getElementById('date_of_birth').value = formatted_date_of_birth;
+    } else {
+        // date not valid, match up to fieldset validation CSS
+        document.getElementById('date_of_birth').value = 'invalid';
+    }
+}); 
 
 function autoTab(element, nextElementID) {
     nextElement = document.getElementById(nextElementID);
