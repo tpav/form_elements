@@ -16,4 +16,6 @@
 
 [Avtivity ticker](https://www.envoyhub.com/style-guide-ticker.html) - CSS only
 
+[Completed animation](https://www.envoyhub.com/style-guide-completion.html) - CSS only
+
 Template is common to all forms, include styles and js contained in HEAD.
