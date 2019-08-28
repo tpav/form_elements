@@ -14,6 +14,6 @@
 
 [Date of Birth](https://www.envoyhub.com/style-guide-dob.html) - JS for validation and formatting date string
 
-[Avtivity ticker](https://www.envoyhub.com/style-guide-ticker.html)
+[Avtivity ticker](https://www.envoyhub.com/style-guide-ticker.html) - CSS only
 
 Template is common to all forms, include styles and js contained in HEAD.
