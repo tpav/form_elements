@@ -12,8 +12,8 @@
 
 [Loader Overlay](https://www.envoyhub.com/style-guide-loader.html) - form_helpers.js
 
-[Date of Birth](https://www.envoyhub.com/style-guide-date-of-birth.html) - JS for validation and formatting date string
+[Date of Birth](https://www.envoyhub.com/style-guide-dob.html) - JS for validation and formatting date string
 
-[Avtivity ticker]()
+[Avtivity ticker](https://www.envoyhub.com/style-guide-ticker.html)
 
 Template is common to all forms, include styles and js contained in HEAD.
