@@ -18,4 +18,6 @@
 
 [Completed animation](https://www.envoyhub.com/style-guide-completion.html) - CSS only
 
+[Textarea with character limit](https://www.envoyhub.com/style-guide-fields.html)
+
 Template is common to all forms, include styles and js contained in HEAD.
