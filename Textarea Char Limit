@@ -26,8 +26,10 @@ textarea {
 
 <script>
 $(function(){
-     // shows and hides when passing a threshold (200 of 250 characters in this example)
+     // sends data in hidden field
+     // shows and hides message when passing a threshold (200 of 250 characters in this example)
      // displays 'XX remaining' after reaching max -50, or 'maximum reached', or 'XX too many'
+     // Note, allows more that 250 characters to be sent. Use maxlength="250" for hard stop.
     $('.max_chars').on('input', function(){
         $('#notes').text( $(this).val() );
         var maxlength = 250;
