@@ -161,7 +161,7 @@ input[type=submit], .button {
 </style>
 
 <script>
-// button click to submit form. Button can be insode or outside form element.
+// button click to submit form. Button can be inside or outside form element.
 var button = document.querySelector('button');
 var form = document.querySelector('form');
 button.addEventListener('click', function(e){
