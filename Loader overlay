@@ -33,5 +33,6 @@
 </style>
 
 <script>
+    // requires form_helpers.js
     var loader_delay = '200';
 </script>
