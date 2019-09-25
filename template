@@ -26,11 +26,12 @@
 	  outline: auto 5px -ms-focus-ring-color!important;
 	}
 	:root {
+	    --key_color:8,79,140; /* question, checked state, slider progress, etc. (NOT BUTTON)*/
 	    --errors_color:240,0,0;
 	    --fields_border_color:#757575;
-	    --fields_border:1px solid var(--fields_border_color);
+	    --fields_border:0 0 0 1px var(--fields_border_color);
+	    --fields_border_focus:0 0 0 2px rgba(var(--key_color),1);
 	    --fields_border_radius:6px;
-	    --key_color:8,79,140; /* question, checked state, slider progress, etc. (NOT BUTTON)*/
 	    /* define color agnostic of rgb or rgba so they work with either*/
 	    /* bright orange */ --button-color-base: 255,165,0;
 	    /* WCAG AA compliant orange --button-color-base: 211,127,0; */
