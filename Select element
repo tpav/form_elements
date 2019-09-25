@@ -27,7 +27,8 @@
 	max-width: 100%;
 	box-sizing: border-box;
 	margin:4px 0;
-	border: var(--fields_border);
+	border:none;
+	box-shadow:var(--fields_border);
 	border-radius: var(--fields_border_radius);
 	-moz-appearance: none;
 	-webkit-appearance: none;
@@ -43,6 +44,9 @@
 }
 .select_normalized option {
 	font-weight:normal;
+}
+.select_normalized:focus {
+	box-shadow:var(--fields_border_focus);
 }
 </style>
 <script>
