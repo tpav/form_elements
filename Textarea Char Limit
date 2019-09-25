@@ -25,36 +25,32 @@ textarea {
 </style>
 
 <script>
+// sends data in hidden field
+// shows and hides message when passing a threshold (200 of 250 characters in this example)
+// displays 'XX remaining' after reaching max -50, or 'maximum reached', or 'XX too many'
+// Note, allows more that 250 characters to be sent. Use maxlength="250" for hard stop.
 $(function(){
-     // sends data in hidden field
-     // shows and hides message when passing a threshold (200 of 250 characters in this example)
-     // displays 'XX remaining' after reaching max -50, or 'maximum reached', or 'XX too many'
-     // Note, allows more that 250 characters to be sent. Use maxlength="250" for hard stop.
-    $('.max_chars').on('input', function(){
+    $('.max_chars').on("input", function(){
         $('#notes').text( $(this).val() );
         var maxlength = 250;
         $('.max, .togo').text(maxlength);
         var currentLength = $(this).val().length;
         if( currentLength >= (maxlength - 50) && currentLength < maxlength ){
-            $('.question_prompt').css({'opacity':'1', 'color':'inherit'});
+            $('.chars').css({'opacity':'1', 'color':'inherit'});
             $('.togo').text(maxlength - currentLength);
             $('.msg').text(' remaining');
-            $('.question_prompt').removeClass('on_error_label_style');
         } else if ( currentLength == maxlength ) {
-            $('.question_prompt').css({'opacity':'1', 'color':'inherit'});
-            $('.question_prompt').removeClass('on_error_label_style');
+            $('.chars').css({'opacity':'1', 'color':'inherit'});
             $('.togo').text('');
             $('.msg').text('maximum reached');
         } else if ( currentLength >= maxlength ) {
-            $('.question_prompt').css({'opacity':'1', 'color':'red'});
-            $('.question_prompt').addClass('on_error_label_style');
+            $('.chars').css({'opacity':'1', 'color':'red'});
             $('.togo').text(Math.abs(maxlength - currentLength));
             $('.msg').text(' too many');
         } else {
             $('.togo').text(maxlength - currentLength);
             $('.msg').text(' remaining');
-            $('.question_prompt').css({'opacity':'0', 'color':'inherit'});
-            $('.question_prompt').removeClass('on_error_label_style');
+            $('.chars').css({'opacity':'0', 'color':'inherit'});
         }
     });
 })
