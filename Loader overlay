@@ -1,9 +1,9 @@
-<div id="loader" class="loader hide_if_validation_error">
+<div id="loader" class="loader_overlay hide_if_validation_error">
   <div class="loader_spinner"></div>
 </div>
 
 <style>
-.loader {
+.loader_overlay {
   position:absolute;
   top:0;
   right:0;
