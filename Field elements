@@ -53,8 +53,10 @@
 }
 input[type=text],input[type=email],input[type=tel],textarea {
     -webkit-appearance: none;
-    padding:1.1vh; width:100%;
-    margin:4px 0; font-size:16px;
+    padding:12px;
+    width:100%;
+    margin:4px 0;
+    font-size:16px;
     border:none;
     box-shadow:var(--fields_border);
     background-color:#fff;
