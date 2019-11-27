@@ -32,7 +32,7 @@
 	    --fields_border:0 0 0 1px var(--fields_border_color);
 	    --fields_border_focus:0 0 0 2px rgba(var(--key_color),1);
 	    --fields_border_radius:6px;
-	    /* define color agnostic of rgb or rgba so they work with either*/
+	    /* define color agnostic of rgb or rgba so they work with either*/ 
 	    /* bright orange */ --button-color-base: 255,165,0;
 	    /* WCAG AA compliant orange --button-color-base: 211,127,0; */
 	    /* WCAG AA compliant blue --button-color-base: 34,93,156; */
