@@ -25,6 +25,9 @@
 	  outline: auto 5px -webkit-focus-ring-color!important;
 	  outline: auto 5px -ms-focus-ring-color!important;
 	}
+	.user-is-tabbing button::-moz-focus-inner {
+	      border: 0;
+	    }
 	:root {
 	    --key_color:8,79,140; /* question, checked state, slider progress, etc. (NOT BUTTON)*/
 	    --errors_color:240,0,0;
