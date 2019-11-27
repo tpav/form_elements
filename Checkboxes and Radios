@@ -49,7 +49,7 @@ Sort out unique IDs, ##errors##, etc after pasting...
 }
 .checkradio_input:first-of-type {margin-top:0;}
 .checkradio_input {margin:20px 0;} /* IE fallback */
-.checkradio_input {margin:var(--checkradio_space_between) 0;}
+.checkradio_input {margin:var(--checkradio_space_between) 0; display:flex; align-items:center; justify-content:flex-start;}
 .checkradio_input:last-of-type {margin-bottom:0;}
 .question_wrap.inline {display:flex; align-items:center; justify-content:space-around;}
 .question_wrap.inline .checkradio_input {margin:0 0 0 20px!important;}
@@ -76,7 +76,9 @@ body:not(:-moz-handler-blocked) fieldset {
 @supports(-webkit-appearance: none) {
 	.checkradio {
 		-webkit-appearance: none;
+		min-width: var(--checkradio_size);
 		width: var(--checkradio_size);
+		max-width: var(--checkradio_size);
 		height: var(--checkradio_size);
 		border: 2px solid var(--fields_border_color);
 		position: relative;
