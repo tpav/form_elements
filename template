@@ -41,7 +41,7 @@
 	}
 	.tcpa_disclosure {font-size:10px; line-height:1.3; color:#757575; margin-top:20px;}
 	.large_question {font-weight:bold; font-size:22px; line-height:1.0; color:rgb(var(--key_color)); padding-bottom:15px;}
-	.question_prompt {font-weight:normal; font-size:14px; color:#000;}
+	.question_prompt {font-weight:normal; font-size:14px; color:#000; line-height:1.3;}
 	.question_wrap {margin-bottom:1.4vh; width:100%; clear:both;}
         .user-is-tabbing .show-on-tab {display:block!important;}
 	ul.form_error { padding:0; margin:0; list-style:none; display:inline; }
