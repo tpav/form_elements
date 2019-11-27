@@ -89,7 +89,7 @@
         @media screen and (min-width: 768px) and (max-width: 799px) {
 	
         }
-    </style>
+    </style> 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script type="text/javascript" src="https://www.envoyhub.com/js/hammer.min.js"></script>
 	<script type="text/javascript" src="https://www.envoyhub.com/js/jquery.hammer.js"></script>
