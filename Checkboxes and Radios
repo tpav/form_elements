@@ -38,7 +38,7 @@ Sort out unique IDs, ##errors##, etc after pasting...
     </div>
 </fieldset>
 
-<style>
+<style id="checkboxs-radios">
 /* only way to set SVG background color, match to --key_color */
 <?php $checked_color = 'rgba(8,79,140,1)';?>
 :root {
