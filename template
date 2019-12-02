@@ -52,7 +52,7 @@
 	.no-hyphen {hyphens:manual; -ms-hyphens:manual; -webkit-hyphens:manual;}
 	ul.form_error { padding:3px 0 0 0; margin:0; list-style:none; display:inline-block; }
 	li.form_error { padding:2px 5px; margin:0; font:normal 11px/13px sans-serif; color:white; display:inline; background:rgba(var(--errors_color),1); border-radius:3px; white-space:nowrap;}
-	legend.on_error_label_style ul.form_error {padding:12px 0 0 0;}
+	legend.on_error_label_style ul.form_error {padding:12px 0 0 0; display:block;}
 	.on_error_background_tint {background-color:rgba(var(--errors_color),0.15)!important;}
 	.on_error_label_style {font-weight:bold;}
 	.input_error {background-color:rgba(var(--errors_color),0.15)!important;}
