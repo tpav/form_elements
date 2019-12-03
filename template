@@ -18,13 +18,13 @@
 	.user-is-tabbing button:focus,
 	.user-is-tabbing input:focus,
 	.user-is-tabbing textarea:focus,
-	.user-is-tabbing .rangeslider__remote_handle.focused,
-	.user-is-tabbing .select_normalized:focus
+	.rangeslider__remote_handle.focused,
+	.select_normalized:focus
 	{
-	  outline: auto 2px Highlight!important; 
-	  outline: auto 5px -webkit-focus-ring-color!important;
-	  outline: auto 5px -ms-focus-ring-color!important;
+	  outline: 4px solid #2895D0; /* contrast checked*/
+	  outline-offset:1px;
 	}
+	
 	.user-is-tabbing button::-moz-focus-inner {
 	      border: 0;
 	    }
