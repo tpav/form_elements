@@ -14,7 +14,7 @@
     </div>
 </div>
 
-<style>
+<style id="range_slider">
 :root {
 	--rangeslider_key_color:rgb(var(--key_color)); /* slider */
 }
