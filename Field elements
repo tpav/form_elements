@@ -34,7 +34,7 @@
     <textarea id="notes" name="notes" placeholder="Comments? (optional)" style="height:100px;" /></textarea>
 </div>
 
-<style>
+<style id="fields">
 .inline_fields_group {
     display:flex;
     align-items:flex-end;
