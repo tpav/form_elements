@@ -4,7 +4,8 @@
     </span>
     <div class="loader" role="alert"></div>
 </button>
-<style>
+
+<style id="buttons">
 #form_submit_button, #form_submit_processing {
     display:none;
 }
