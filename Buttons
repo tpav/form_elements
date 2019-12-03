@@ -63,6 +63,10 @@ input[type=submit], .button {
     pointer-events:none!important;
     animation:none!important;
 }
+/* hover effect, not on mobile */
+.no-touch .hover:hover {
+    filter:brightness(110%);
+}
 
 /* click/touch effect */
 .ripple {
