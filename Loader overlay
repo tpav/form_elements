@@ -2,7 +2,7 @@
   <div class="loader_spinner"></div>
 </div>
 
-<style>
+<style id="loader_overlay">
 .loader_overlay {
   position:absolute;
   top:0;
