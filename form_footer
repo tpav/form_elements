@@ -1,1 +1,51 @@
-fdvdf
+<button class="button ripple pulse">Compare Options &#x025B8; 
+    <div class="loader" role="alert"></div>
+</button>
+
+<div style="padding-top:30px;">##tcpa_disclosure##</div>
+
+<script id="checkbox_group_fieldset_validation_display">
+// OPTIONAL: style label, field or fieldset elements if server validation error is present.
+var form_errors = document.querySelectorAll('ul.form_error'), tintable_fields, tintable_fieldset;
+form_errors.forEach(function(e){
+    // starting at error traverse to parent 'label'
+    e.parentNode.classList.add('on_error_label_style');
+    // starting at error traverse to adjacent 'field'
+    tintable_fields = e.parentNode.parentNode.querySelectorAll('input[type=text], input[type=email], input[type=tel], select, textarea');
+    tintable_fields.forEach(function(f){
+        f.classList.add('on_error_background_tint');
+    });
+    // starting at error select parent of parent only apply if 'fieldset'
+    tintable_fieldset = e.parentNode.parentNode;
+    if (tintable_fieldset.nodeName == 'FIELDSET') {
+        tintable_fieldset.classList.add('on_error_background_tint');
+    }
+});
+</script>
+
+<script id="button">
+// button click to submit form. Button can be inside or outside form element.
+var button = document.querySelector('button');
+var form = document.querySelector('form');
+button.addEventListener('click', function(e){
+    setTimeout(function(){
+        form.submit();
+    }, 1000); // inject delay so animation is seen
+    button.setAttribute('disabled', true);
+    button.classList.add('button_active_fancy'); // optional if you want button to visually change...
+})
+</script>
+
+
+<script id="data">
+console.log('Debt reason: ##data:debt_reason##');
+console.log('Debt type: ##data:debt_type##');
+console.log('Debt amount: ##data:debt_amount##');
+console.log('First name: ##data:first_name##');
+console.log('Last name: ##data:last_name##');
+console.log('Email: ##data:email##');
+console.log('Phone: ##data:primary_phone##');
+console.log('Zip: ##data:zip##');
+console.log('City: ##data:city##');
+console.log('State: ##data:state##');
+</script>
