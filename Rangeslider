@@ -9,7 +9,7 @@
         </div>
         <input type="hidden" name="debt_amount" class="true_amount" value="20000" />
     </div>
-    <div style="padding:0 0 2vh 0;">
+    <div style="padding:0 0 2rem 0;">
         <div class="question_prompt">*Includes medical bills, personal loans, store cards, balance transfers and other debts not secured by&nbsp;property.</div>
     </div>
 </div>
