@@ -1,6 +1,6 @@
 # Form Elements
 
-Copy and paste Header and Footer to CMS forms page. Then a field type to fields tab.
+--Copy and paste form_header and form_footer to CMS form pages. Then a field type to fields tab.--
 
 [Buttons preview](https://www.envoyhub.com/style-guide/buttons.html) - JS for animation and submit
 
@@ -12,7 +12,7 @@ Copy and paste Header and Footer to CMS forms page. Then a field type to fields 
 
 [Loader Overlay](https://www.envoyhub.com/style-guide/loader.html) - form_helpers.js
 
-Add css and js to form Header if needed.
+--Add css and js to form Header if needed.--
 
 [Date of Birth](https://www.envoyhub.com/style-guide/dob.html) - JS for validation and formatting date string
 
