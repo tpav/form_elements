@@ -1,6 +1,6 @@
 Sort out unique IDs, ##errors##, etc after pasting...
 <fieldset id="step-##data:step_id##_##tag##">
-    <legend class="large_question">What types of debt do you have? <span class="question_prompt">(select all that apply)</span> ##errors##</legend>
+    <legend class="large_question center">What types of debt do you have? <span class="question_prompt">(select all that apply)</span> ##errors##</legend>
     <div id="step-##data:step_id##_##tag##" class="question_wrap">
         <div class="checkradio_input">
             <input type="checkbox" class="checkradio" id="##tag##_101" name="##tag##[]" value="Credit Card Debt" />
@@ -21,7 +21,7 @@ Sort out unique IDs, ##errors##, etc after pasting...
     </div>
 </fieldset>
 <fieldset id="step-##data:step_id##_##tag##">
-    <legend>Are you behind on your payments? ##errors##</legend>
+    <legend class="center">Are you behind on your payments? ##errors##</legend>
     <div id="step-##data:step_id##_##tag##" class="question_wrap">
         <div class="checkradio_input">
             <input type="radio" class="checkradio" id="##tag##_141" name="##tag##" value="1" />
