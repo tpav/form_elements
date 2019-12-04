@@ -138,8 +138,8 @@ color:#999;
 input[type=submit], .button {
       -webkit-appearance: none;
       appearance: none;
-      display:inline-block;
-      font-family:'Assistant',sans-serif;
+      display:block;
+      font-family:var(--font_stack);
       text-decoration:none;
       border:0;
       padding: 17px 25px;
