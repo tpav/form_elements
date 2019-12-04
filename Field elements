@@ -25,12 +25,12 @@
 </div>
 
 <div id="step-##data:step_id##_##tag##" class="question_wrap text_input">
-    <label id="label_for_zip" for="zip" class="text_field_label">Zip: <span class="question_prompt required">(required)</span> <ul class="form_error" id="first_name-error"><li class="form_error" id="first_name-error1">Required Field</li></ul></label>
+    <label id="label_for_zip" for="zip" class="text_field_label">Zip: <span class="question_prompt required">(required)</span> ##errors##</label>
     <input type="tel" id="zip" name="zip" value="" autocomplete="postal-code" maxlength="5" />
 </div>
 
 <div id="step-##data:step_id##_##tag##" class="question_wrap text_input">
-    <label id="label_for_notes" for="notes" class="text_field_label">Anything we should know about your situation? <ul class="form_error" id="first_name-error"><li class="form_error" id="first_name-error1">Required Field</li></ul></label>
+    <label id="label_for_notes" for="notes" class="text_field_label">Anything we should know about your situation? ##errors##</label>
     <textarea id="notes" name="notes" placeholder="Comments? (optional)" style="height:100px;" /></textarea>
 </div>
 
