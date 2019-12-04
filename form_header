@@ -296,7 +296,7 @@ input[type=submit], .button {
 <?php $checked_color = 'rgba(8,79,140,1)';?>
 :root {
 	--checked_color:var(--key_color);
-	--checkradio_size:1.9rem;
+	--checkradio_size:2rem;
 	--checkradio_label_size:calc(var(--checkradio_size) * 0.6);
 	--checkradio_space_between:calc(var(--checkradio_size) * 0.4);
 }
@@ -341,7 +341,7 @@ body:not(:-moz-handler-blocked) fieldset {
 		vertical-align:middle;
 	}
 	.checkradio + label {
-		vertical-align:middle; padding-left:3px; font-size:var(--checkradio_label_size); align-self:center;
+		vertical-align:middle; padding-left:5px; font-size:var(--checkradio_label_size); align-self:center;
 	}
 	.checkradio:checked {
 		background:rgba(var(--checked_color),1);
