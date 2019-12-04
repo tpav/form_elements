@@ -1,5 +1,5 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<div id="loader" class="loader_overlay">
+<div id="loader" class="loader_overlay hide_if_validation_error">
   <div class="loader_spinner"></div>
 </div>
 <script id="initialize">
