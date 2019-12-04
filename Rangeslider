@@ -270,7 +270,7 @@ input[type="range"]:focus +  .rangeslider .rangeslider__handle {
 }
 </style>
 
-<script>
+<script id="slider">
 $(function(){
 	// requires https://www.envoyhub.com/js/form_helpers.js
 	if (typeof remote_output_slider == 'function') { 
