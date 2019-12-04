@@ -1,4 +1,5 @@
 Sort out unique IDs, ##errors##, etc after pasting...
+[CHECKBOXES]
 <fieldset id="step-##data:step_id##_##tag##">
     <legend class="large_question left">What types of debt do you have? <span class="question_prompt">(select all that apply)</span> ##errors##</legend>
     <div id="step-##data:step_id##_##tag##" class="question_wrap">
@@ -20,6 +21,7 @@ Sort out unique IDs, ##errors##, etc after pasting...
         </div>
     </div>
 </fieldset>
+[RADIOS]
 <fieldset id="step-##data:step_id##_##tag##">
     <legend>Are you behind on your payments? ##errors##</legend>
     <div id="step-##data:step_id##_##tag##" class="question_wrap checkradio_group_center">
