@@ -64,11 +64,11 @@ legend.on_error_label_style ul.form_error {padding:12px 0 0 0; display:block;}
 /* fallback for < IE11. Can't do css vars */
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {  
 	li.form_error {
-	background:rgba(240,0,0,1);
-}
-.on_error_background_tint, .input_error {background-color:rgba(240,0,0,0.15)!important;}
-.select_normalized {border: 1px solid #757575; border-radius: 6px;}
-input[type=text],input[type=email],input[type=tel],textarea, select {border: 1px solid #757575; border-radius: 6px;}
+		background:rgba(240,0,0,1);
+	}
+	.on_error_background_tint, .input_error {background-color:rgba(240,0,0,0.15)!important;}
+	.select_normalized {border: 1px solid #757575!important; border-radius: 6px!important;}
+	input[type=text],input[type=email],input[type=tel],textarea, select {border: 1px solid #757575!important; border-radius: 6px;!important}
 }
 ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
 color:#999;
