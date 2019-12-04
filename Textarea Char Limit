@@ -8,11 +8,11 @@
 <style>
 .text_field_label {
     margin:8px 0 2px 0;
-    font-size:15px;
+    font-size:1rem;
 }
 input[type=text],input[type=email],input[type=tel],textarea {
     -webkit-appearance: none;
-    padding:1.1vh; width:100%;
+    padding:15px; width:100%;
     margin:4px 0; font-size:16px;
     border:var(--fields_border);
     background-color:#fff;
@@ -20,7 +20,7 @@ input[type=text],input[type=email],input[type=tel],textarea {
     border-radius:var(--fields_border_radius);
 }
 textarea {
-    font-size:16px;
+    font-size:1rem;
 }
 </style>
 
