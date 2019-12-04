@@ -20,6 +20,6 @@
 
 [Completed animation demo](https://www.envoyhub.com/style-guide/completion.html) - CSS only
 
-[Textarea with character limit demo](https://www.envoyhub.com/style-guide/fields.html)
+[Textarea with character limit demo](https://www.envoyhub.com/style-guide/fields.html) - Configured to show status when approaching a set limit (250)
 
 [Select demo](https://www.envoyhub.com/style-guide/select.html) - JS optional 
