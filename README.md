@@ -1,4 +1,4 @@
-# Form Elements
+e# Form Elements
 
 [Buttons preview](https://www.envoyhub.com/style-guide/buttons.html) - JS for animation and submit
 
@@ -20,6 +20,4 @@
 
 [Textarea with character limit](https://www.envoyhub.com/style-guide/fields.html)
 
-Template is common to all forms, include styles and js contained in HEAD.
-
-To do: Merge css into one for easy copy paste form header 
+Header and footer is common to all forms. Copy and paste from there. **Does not include DOB, select, activity, completion animation.
