@@ -8,7 +8,7 @@
         <input type="text" id="##tag##_2" name="##tag##" value="" autocomplete="additional-name" />
     </div>
     <div id="step-##data:step_id##_##tag##" class="question_wrap text_input">
-        <label id="label_for_##tag##_3" for="##tag##_3" class="text_field_label">Last name: <span class="question_prompt required">(required)</span> <ul class="form_error" id="first_name-error"><li class="form_error" id="first_name-error1">Required Field</li></ul></label>
+        <label id="label_for_##tag##_3" for="##tag##_3" class="text_field_label">Last name: <span class="question_prompt required">(required)</span> ##errors##</label>
         <input type="text" id="##tag##_3" name="##tag##" value="" autocomplete="family-name" />
     </div>
 </div>
