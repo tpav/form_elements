@@ -7,7 +7,7 @@
     var submit_button_label = '', button_pressed_label = 'Submitting...', loader_delay = '500', scroll_anchor = 'iframe';
 </script>
 <!-- set up fonts... see --font_stack var -->
-<link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700,800" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700,800&display=swap" rel="stylesheet">
 
 <style id="general">
 :root {
