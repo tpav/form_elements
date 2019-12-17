@@ -21,7 +21,7 @@
 
 <div id="step-##data:step_id##_##tag##" class="question_wrap text_input">
     <label id="label_for_##tag##_5" for="##tag##_5" class="text_field_label">Email: <span class="question_prompt required">(required)</span> ##errors##</label>
-    <input type="email" id="##tag##_5" name="##tag##" value="test@envoymediagroup.com" autocomplete="email" class="validated_input_text" />
+    <input type="email" id="##tag##_5" name="##tag##" value="" autocomplete="email" class="validated_input_text" />
 </div>
 
 <div id="step-##data:step_id##_##tag##" class="question_wrap text_input">
