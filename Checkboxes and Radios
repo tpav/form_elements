@@ -3,6 +3,7 @@ Sort out unique IDs, ##errors##, etc after pasting...
 <fieldset id="step-##data:step_id##_##tag##">
     <legend class="large_question left">What types of debt do you have? <span class="question_prompt">(select all that apply)</span> ##errors##</legend>
     <div id="step-##data:step_id##_##tag##" class="question_wrap">
+     <div style="display:inline-block; text-align:left;">
         <div class="checkradio_input">
             <input type="checkbox" class="checkradio" id="##tag##_101" name="##tag##[]" value="Credit Card Debt" />
             <label id="label_for_##tag##_10" for="##tag##_101" class="checkradio_label">Credit Card Debt</label>
@@ -19,12 +20,14 @@ Sort out unique IDs, ##errors##, etc after pasting...
             <input type="checkbox" class="checkradio" id="##tag##_131" name="##tag##[]" value="Other Debt" />
             <label id="label_for_##tag##_10" for="##tag##_131" class="checkradio_label">Other Debt</label>
         </div>
+      </div>
     </div>
 </fieldset>
 [RADIOS]
 <fieldset id="step-##data:step_id##_##tag##">
     <legend>Are you behind on your payments? ##errors##</legend>
     <div id="step-##data:step_id##_##tag##" class="question_wrap checkradio_group_center">
+     <div style="display:inline-block; text-align:left;">
         <div class="checkradio_input">
             <input type="radio" class="checkradio" id="##tag##_141" name="##tag##" value="1" />
             <label id="label_for_##tag##_10" for="##tag##_141" class="checkradio_label">Yes</label>
@@ -37,6 +40,7 @@ Sort out unique IDs, ##errors##, etc after pasting...
             <input type="radio" class="checkradio" id="##tag##_161" name="##tag##" value="3" />
             <label id="label_for_##tag##_10" for="##tag##_161" class="checkradio_label">Not Sure</label>
         </div>
+      </div>
     </div>
 </fieldset>
 
