@@ -4,6 +4,8 @@
 
 <div style="padding-top:30px;">##tcpa_disclosure##</div>
 
+</div><!-- / fit to mobile -->
+
 <script id="checkbox_group_fieldset_validation_display">
 // OPTIONAL: style label, field or fieldset elements if server validation error is present.
 var form_errors = document.querySelectorAll('ul.form_error'), tintable_fields, tintable_fieldset;
@@ -33,6 +35,27 @@ button.addEventListener('click', function(e){
     }, 750); // inject delay so animation is seen
     button.setAttribute('disabled', true);
     button.classList.add('button_active_fancy'); // optional if you want button to visually change...
+})
+</script>
+
+<script id="mobile_form_layout_optimizer">
+function mobile_form_layout_optimizer(header) {
+    if (typeof window.orientation !== 'undefined') { // not desktop
+        if (header) {
+            var parentUsableHeight = window.parent.innerHeight - $('#primary_form', window.parent.document).offset().top;
+        } else {
+            var parentUsableHeight = window.parent.innerHeight;
+        }
+            var iframeFormHeight = $('.fit_to_mobile').outerHeight(true);
+        if (parentUsableHeight < 800 && parentUsableHeight >= iframeFormHeight) { // constrain when on tablets
+            $('.fit_to_mobile').css({'height':parentUsableHeight + 'px'});
+            $('body').addClass('will_fit_mobile');
+        }
+    console.log('Window height: ' + window.parent.innerHeight + ' | parentUsableHeight: ' + parentUsableHeight + ' | iframeFormHeight: ' + iframeFormHeight);
+    }
+}
+$(function(){
+    mobile_form_layout_optimizer(); // add true if first step, remove function call to disable
 })
 </script>
 
