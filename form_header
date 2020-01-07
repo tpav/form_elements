@@ -42,7 +42,8 @@ outline: auto 2px Highlight!important;
 outline: auto 5px -webkit-focus-ring-color!important;
 outline: auto 5px -ms-focus-ring-color!important;
 }
-
+.will_fit_mobile .fit_to_mobile {display:flex; flex-direction:column; justify-content:space-around}
+.will_fit_mobile .button {margin-top:auto; margin-bottom:auto;}
 .center {text-align:center;}
 .tcpa_disclosure {font-size:10px; line-height:1.3; color:#757575; margin-top:20px;}
 .large_question {font-weight:bold; font-size:22px; line-height:1.2; color:rgb(var(--key_color,8,79,140)); padding-bottom:15px;}
