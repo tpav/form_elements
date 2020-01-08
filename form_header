@@ -218,6 +218,37 @@ body:not(:-moz-handler-blocked) fieldset {
 			box-shadow:0 0 0px 30px rgba(180,180,180,0);
 		}
 	}
+	.checkradio.happy:not(:checked)::before, .checkradio.happy:checked::before {
+		background-image:radial-gradient(circle, rgba(var(--key_color,8,79,140),1) 30%, transparent 40%),radial-gradient(circle, rgba(var(--key_color,8,79,140),1) 30%, transparent 40%),radial-gradient(circle, rgba(var(--key_color,8,79,140),1) 30%, transparent 40%),radial-gradient(circle, rgba(var(--key_color,8,79,140),1) 30%, transparent 40%),
+		radial-gradient(circle, rgba(var(--key_color,8,79,140),0.7) 30%, transparent 40%),radial-gradient(circle, rgba(var(--key_color,8,79,140),0.7) 30%, transparent 40%),radial-gradient(circle, rgba(var(--key_color,8,79,140),0.7) 30%, transparent 40%),radial-gradient(circle, rgba(var(--key_color,8,79,140),0.7) 30%, transparent 40%);
+		background-repeat:no-repeat;
+		background-size:49% 49%,49% 49%,49% 49%,49% 49%,49% 49%,49% 49%,49% 49%,49% 49%;
+		background-position:
+		50% 50%,
+		50% 50%,
+		50% 50%,
+		50% 50%,
+		50% 50%,
+		50% 50%,
+		50% 50%,
+		50% 50%;
+		position: absolute;
+		z-index:-1;
+		top: -10px; 
+		right:-10px;
+		bottom:-10px;
+		left: -10px;
+		content: "";
+	}
+	.checkradio.happy:not(:checked)::before {
+		opacity:0;
+	}
+	.checkradio.happy:checked::before {
+		-webkit-animation:checkBubbles 0.3s ease-in-out 0.0s 1 forwards;
+	}
+	.checkradio.happy:checked::after {
+		-webkit-animation:none;
+	}
 }
 </style>
 
