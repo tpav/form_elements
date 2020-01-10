@@ -129,10 +129,10 @@ color:var(--font-color,#000000);
 	--checkradio_label_size:calc(var(--checkradio_size) * 0.6);
 	--checkradio_space_between:calc(var(--checkradio_size) * 0.4);
 }
-.checkradio_input:first-of-type {margin-top:0;}
-.checkradio_input {margin:20px 0;} /* IE fallback */
-.checkradio_input {margin:var(--checkradio_space_between) 0; display:flex; justify-content:flex-start;}
-.checkradio_input:last-of-type {margin-bottom:0;}
+.checkradio_input:first-of-type, .checkradio_button:first-of-type {margin-top:0;}
+.checkradio_input, .checkradio_button {margin:20px 0;} /* IE fallback */
+.checkradio_input, .checkradio_button {margin:var(--checkradio_space_between) 0; display:flex; justify-content:flex-start;}
+.checkradio_input:last-of-type, .checkradio_button:last-of-type {margin-bottom:0;}
 .question_wrap.inline {display:flex; align-items:center; justify-content:space-around;}
 .question_wrap.inline .checkradio_input {margin:0 0 0 20px!important;}
 legend {
@@ -265,6 +265,28 @@ body:not(:-moz-handler-blocked) fieldset {
 			background-size: 0% 0%;
 		}
 	}
+}
+
+.checkradio_button .checkradio {
+	-webkit-appearance: none;
+}
+.checkradio_button .checkradio + label {
+	font-size:var(--checkradio_label_size);
+	border: 3px solid var(--fields_border_color);
+	text-align:center;
+	width:100%;
+	padding:.7em 1em;
+	border-radius:var(--fields_border_radius);
+	text-transform:uppercase;
+	font-weight:bold;
+	color:var(--fields_border_color);
+	transition:all 0.1s ease-in-out;
+}
+
+.checkradio_button .checkradio:checked  + label {
+	background:rgb(var(--checked_color));
+	border-color:rgb(var(--checked_color));
+	color:#fff;
 }
 </style>
 
