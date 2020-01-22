@@ -12,7 +12,7 @@
 
 [Loader Overlay demo](https://www.envoyhub.com/style-guide/loader.html) - form_helpers.js
 
---Add css and js to form Header if needed.--
+-- change class for spinner vs progress bar --
 
 [Date of Birth demo](https://www.envoyhub.com/style-guide/dob.html) - JS for validation and formatting date string
 
