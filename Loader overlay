@@ -1,7 +1,13 @@
+Spinner version
 <div id="loader" class="loader_overlay hide_if_validation_error">
   <div class="loader_spinner"></div>
 </div>
 
+Progress bar version
+<div id="loader" class="loader_overlay">
+  <div class="loader_progress"></div>
+  <div style="font-size:85%; padding-top:25px;">Analyzing financial difficulties...</div>
+</div>
 
 <script>
     // requires form_helpers.js
