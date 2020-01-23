@@ -374,30 +374,19 @@ textarea {
     height:20px;
     border-radius:20px;
     box-shadow:0 0 0 2px rgba(255,255,255,1),0 0 0 4px rgba(221,221,221,1);
-    background-image: linear-gradient(270deg, #ffffff 50%,#21c678 50%);
-    background-size: 400% 400%;
+    background-image: linear-gradient(270deg, rgba(255,255,255,1) 50%,rgba(var(--key_color),1.0) 50%);
+    background-size: 200% 200%;
     animation: loader_progress 4.5s linear forwards;
 }
 @keyframes loader_progress {
     0% {
         background-position:100% 50%;
-        
-    }
-    50% {
-        background-position:40% 50%;
-        
     }
     60% {
-        background-position:40% 50%;
-        
-    }
-    80% {
-        background-position:35% 50%;
-        
+        background-position:60% 50%;
     }
     100% {
         background-position:0% 50%;
-        
     }
 }
 </style>
