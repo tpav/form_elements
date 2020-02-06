@@ -18,12 +18,14 @@
 }
 /*
 Following can be set by parent. Fallbacks will show key color as blue, font as sans-serif
---key-color
---font_color
---button-color-base
---font-family-sans
---font-family-serif
---checkradio-svg-filter
+--key-color:70,130,58;
+--key-color-hex:#46823a;
+--font-color:#757575;
+--button-color-base:29,170,0;
+--font-family-sans:'Montserrat', sans-serif;
+--font-family-serif:'Roboto Slab', Georgia, serif;
+--checkradio-svg-filter:invert(34%) sepia(58%) saturate(4301%) hue-rotate(207deg) brightness(97%) contrast(99%);
+--svg-key-color:invert(43%) sepia(19%) saturate(1314%) hue-rotate(64deg) brightness(95%) contrast(86%);
 */
 html { box-sizing: border-box;}
 *, *:before, *:after {box-sizing: inherit;}
@@ -196,7 +198,7 @@ body:not(:-moz-handler-blocked) fieldset {
         background-repeat:no-repeat;
         background-size:calc(var(--checkradio_size) * 1.0);
         background-position:63% 37%;
-        filter: var(--checkradio-svg-filter,hue-rotate(0deg) brightness(100%) saturate(100%));
+        /*filter: var(--checkradio-svg-filter,hue-rotate(0deg) brightness(100%) saturate(100%));*/
     }
     .checkradio:not(:checked)::after {
         opacity:0;
