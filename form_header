@@ -835,10 +835,12 @@ input[type=submit], .button {
 }
 
 /* fallback for < IE11. Can't do css vars */
-@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {  
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  body {font-family:sans-serif;}
   input[type=submit], .button {
        background-color: rgb(211,127,0);
   }
+  input[type=text],input[type=tel],input[type=email] {border:1px solid #ddd;}
 }
 </style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
